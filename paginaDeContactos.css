@@ -1,0 +1,126 @@
+body{
+    background-color: #2B2E4A;
+    color: white;
+    
+}
+
+.inputNombre{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputEmail{
+    display: flex;
+    flex-direction: column;
+}
+
+.areaDeConsulta{
+    display: flex;
+    flex-direction: column;
+}
+
+.botonEnviar{
+    color: white;
+    background-color: #E84545;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+}
+
+@media (max-width: 700px) { 
+    
+    .sectionContacto{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .formularioContacto{
+        margin-left: 30px;
+
+    }
+
+    .imagenContacto{
+        height: 260px;
+        width: 75%;
+        margin-left: 30px;
+        
+    }
+
+    .inputNombre{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+        
+    .inputEmail{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .areaDeConsulta{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .botonEnviar{
+        margin-top: 5px;
+        
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+
+    .imagenContacto{
+        width: 40%;
+        margin: 20px;
+
+    }
+
+    .formularioContacto{
+        width: 40%;
+        margin: 20px;
+    }
+
+    .botonEnviar{
+        margin-top: 15px;
+    }
+
+    .inputEmail{
+        margin-top: 10px;
+    }
+
+    .areaDeConsulta{
+        margin-top: 10px;
+    }
+
+    .sectionContacto{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width:1025px) {
+    .formularioContacto{
+        margin-top: 40px;
+        
+    }
+
+    .sectionContacto{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .inputEmail{
+        margin-top: 20px;
+    }
+
+    .areaDeConsulta{
+        margin-top: 20px;
+    }
+
+    .botonEnviar{
+        margin-top: 20px;
+    }
+}
+
