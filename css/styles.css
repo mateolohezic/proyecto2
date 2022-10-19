@@ -1,7 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 .error{
   display: none;
 }
 
 .error-active{
   display: block;
+}
+.navbar{
+  width: 100%;
+  background-color:#903749;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .boton{
+  background-color: #2B2E4A;
+  color: antiquewhite;
+  text-align: center;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  transition: all 300ms ease;
+}
+.navbar .boton:hover{
+  background-color: #E84545;
+}
+.registro{
+  color: #E84545;
+  text-decoration: none;
+}
+.registro:hover{
+  color: #903749;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+.pie-pagina{
+width: 100%;
+background-color: #903749;
+}
+.pie-pagina .grupo-1{
+width: 100%;
+max-width: 2000px;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(3, .5fr);
+grid-gap: 50px;
+padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.pie-pagina .grupo-1 .box .logo{
+  display: inline-block;
+  transition: all 1s ease-out;
+}
+.pie-pagina .grupo-1 .box .logo:hover {
+  background-color: #E84545;
+  border-radius: 100%;
+}
+.pie-pagina .grupo-1 .box figure img{
+  width: 175px;
+}
+.pie-pagina .grupo-1 .box h2{
+  color: rgb(212, 216, 220);
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box-1 h2{
+  color: rgb(212, 216, 220);
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box-1 a{
+  display: block;
+  text-decoration: none;
+  color: #bfc1c9;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .box-1 a:hover{
+  color: #E84545;
+}
+.pie-pagina .grupo-1 .redes a{
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: antiquewhite;
+  margin-right: 10px;
+  background-color: #2B2E4A;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .redes a:hover{
+  color: #E84545;
+}
+.pie-pagina .grupo-2{
+  background-color: #53354A;
+  padding: 15px 10px;
+  text-align: center;
+  color: rgb(172, 173, 173);
+}
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}
+@media screen and (max-width:800px) {
+  .pie-pagina .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+    }
 }

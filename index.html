@@ -4,23 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Store</title>
+  <title>Zona Play</title>
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <body>
   <section>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand ms-1" href="./index.html">Navbar</a>
+        <a class="navbar-brand ms-1 logo" href="./index.html"><img src="img/Logo ZONA PLAY ig.png" alt="Logo ZonaPlay" width="125px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav ms-auto">
-            <button type="button" class="btn btn-secondary mt-2 ms-1 me-1" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Iniciar sesion <i class="bi bi-person"></i></button>
-            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <button type="button" class="btn mt-2 ms-1 me-1 boton" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Iniciar sesion<i class="bi bi-person"></i></button>
+            <div class="modal fade modal" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header bg-dark text-light">
@@ -40,13 +40,13 @@
                       <div class="error text-danger mb-4" id="error">
                         <h6>Usuario incorrecto o contraseña incorrecta.</h6>
                       </div>
-                      <button type="submit" class="btn btn-secondary">Ingresar</button>
+                      <button type="submit" class="btn btn-danger">Ingresar</button>
                     </form>                 
                   </div>
                   <div class="modal-footer bg-dark text-light">
                     ¿No tienes una cuenta?
                     <div data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
-                      <a class="text-secondary" href="#exampleModalToggle2">Regístrate</a></div>
+                      <a class="registro" href="#exampleModalToggle2">Regístrate</a></div>
                   </div>
                 </div>
               </div>
@@ -142,15 +142,46 @@
                 </div>
               </div>
             </div>           
-            <button type="button" class="btn btn-secondary mt-2 ms-1 me-1">Buscar <i class="bi bi-search"></i></button>
-            <button type="button" class="btn btn-secondary mt-2 ms-1 me-1">Descargar <i class="bi bi-download"></i></button>
+            <button type="button" class="btn mt-2 ms-1 me-1 boton">Buscar <i class="bi bi-search"></i></button>
+            <button type="button" class="btn mt-2 ms-1 me-1 boton">Descargar <i class="bi bi-download"></i></button>
           </div>
         </div>
       </div>
     </nav>
   </section>
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a href="index.html" class="logo">
+              <img src="img/Logo ZONA PLAY ig.png" alt="Logo zona play">
+            </a>
+          </figure>
+        </div>
+        <div class="box-1">
+          <h2>SOBRE NOSOTROS</h2>
+          <a href="#">Quienes somos</a>
+          <a href="#">Contacto</a>
+          <a href="#">Politica de privacidad</a>
+          <a href="#">Reembolsos</a>
+        </div>
+        <div class="box">
+          <h2>SIGUENOS</h2>
+          <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"></a>
+          </div>
+        </div>
+      </div>
+      <div class="grupo-2">
+        <small>&copy; 2022 <b>ZonaPlay</b> - Todos los derechos reservados.</small>
+      </div>
+    </footer>
   <script src="./js/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/e04dfe5a58.js" crossorigin="anonymous"></script>
 </body>
 </html>
 
