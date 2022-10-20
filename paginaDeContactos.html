@@ -10,69 +10,58 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand ms-1" href="./index.html">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand ms-1 logo" href="./index.html"><img src="img/Logo ZONA PLAY ig.png" alt="Logo ZonaPlay" width="125px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav ms-auto">
-              <button type="button" class="btn btn-secondary mt-2 ms-1 me-1" data-bs-toggle="modal" href="#exampleModalToggle"
-                role="button">Iniciar sesion <i class="bi bi-person"></i></button>
-              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-                tabindex="-1">
+              <button type="button" class="btn mt-2 ms-1 me-1 boton" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Iniciar sesión<i class="bi bi-person"></i></button>
+              <div class="modal fade modal" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header bg-dark text-light">
                       <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Iniciar sesión</h1>
-                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-dark text-light">
                       <form class="" onsubmit="loginUser()">
                         <div class="mb-3">
                           <label for="userLogin" class="form-label">Usuario</label>
-                          <input type="text" class="form-control" id="userLogin" aria-describedby="emailHelp" value=""
-                            required>
+                          <input type="text" class="form-control" id="userLogin" aria-describedby="emailHelp" value="" required>               
                         </div>
                         <div class="mb-4">
                           <label for="passwordLogin" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" id="passwordLogin" value="" required>
+                          <input type="password" class="form-control" id="passwordLogin" value="" required>                     
                         </div>
                         <div class="error text-danger mb-4" id="error">
                           <h6>Usuario incorrecto o contraseña incorrecta.</h6>
                         </div>
-                        <button type="submit" class="btn btn-secondary">Ingresar</button>
-                      </form>
+                        <button type="submit" class="btn btn-danger">Ingresar</button>
+                      </form>                 
                     </div>
                     <div class="modal-footer bg-dark text-light">
                       ¿No tienes una cuenta?
                       <div data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
-                        <a class="text-secondary" href="#exampleModalToggle2">Regístrate</a>
-                      </div>
+                        <a class="registro" href="#exampleModalToggle2">Regístrate</a></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-                tabindex="-1">
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                   <div class="modal-content">
                     <div class="modal-header bg-dark text-light">
                       <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Regístrate ahora mismo.</h1>
-                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-dark">
-                      <form class="row g-3 was-validated"
-                        oninput='up2.setCustomValidity(up2.value != up.value ? "Las contraseñas no coinciden." : "")' validate
-                        onsubmit="createUser()">
+                      <form class="row g-3 was-validated" oninput='up2.setCustomValidity(up2.value != up.value ? "Las contraseñas no coinciden." : "")' validate onsubmit="createUser()">
                         <div class="col-md-6 text-light">
                           <label for="nameId" class="form-label">Nombre</label>
-                          <input type="text" class="form-control" id="nameId" pattern="[A-Za-z]+" minlength="2" maxlength="22"
-                            value="" required>
+                          <input type="text" class="form-control" id="nameId" pattern="[A-Za-z]+" minlength="2" maxlength="22" value="" required>
                           <div class="valid-feedback">
                             Todo bien!
                           </div>
@@ -82,8 +71,7 @@
                         </div>
                         <div class="col-md-6 text-light">
                           <label for="surnameId" class="form-label">Apellido</label>
-                          <input type="text" class="form-control" id="surnameId" pattern="[A-Za-z]+" minlength="2"
-                            maxlength="22" value="" required>
+                          <input type="text" class="form-control" id="surnameId" pattern="[A-Za-z]+" minlength="2" maxlength="22" value="" required>
                           <div class="valid-feedback">
                             Todo bien!
                           </div>
@@ -95,20 +83,18 @@
                           <label for="userId" class="form-label">Usuario</label>
                           <div class="input-group has-validation">
                             <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="userId" aria-describedby="inputGroupPrepend"
-                              pattern="[a-za-z0-9]+" minlength="6" maxlength="16" value="" required>
+                            <input type="text" class="form-control" id="userId" aria-describedby="inputGroupPrepend" pattern="[a-za-z0-9]+" minlength="6" maxlength="16" value="" required>
                             <div class="valid-feedback">
                               Todo bien!
                             </div>
                             <div class="invalid-feedback">
-                              El usuario tiene que ser de 6 a 16 caracteres y solo puede contener numeros y letras.
+                              El usuario tiene que ser de 6 a 16 caracteres y solo puede contener números y letras.
                             </div>
                           </div>
-                        </div>
+                        </div>            
                         <div class="col-md-6 text-light">
                           <label for="emailId" class="form-label">Correo electrónico</label>
-                          <input type="email" class="form-control" id="emailId" minlength="2" maxlength="32" value=""
-                            required>
+                          <input type="email" class="form-control" id="emailId" minlength="2" maxlength="32" value="" required>
                           <div class="valid-feedback">
                             Todo bien
                           </div>
@@ -118,56 +104,52 @@
                         </div>
                         <div class="col-md-6 text-light">
                           <label for="password1" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" id="password1" minlength="6" maxlength="12" value=""
-                            required name="up">
+                          <input type="password" class="form-control" id="password1" minlength="6" maxlength="12" value="" required name="up">
                           <div class="valid-feedback">
                             Todo bien
                           </div>
                           <div class="invalid-feedback">
                             La contraseña tiene que ser de 6 a 12 caracteres.
                           </div>
-                        </div>
+                        </div>                     
                         <div class="col-md-6 text-light">
                           <label for="password2" class="form-label">Repetir contraseña</label>
-                          <input type="password" class="form-control" id="password2" minlength="6" maxlength="10" required
-                            name="up2">
+                          <input type="password" class="form-control" id="password2" minlength="6" maxlength="10" required name="up2">
                           <div class="valid-feedback">
                             Las contraseñas coinciden
                           </div>
                           <div class="invalid-feedback">
                             Las contraseñas no coinciden
-                          </div>
-                        </div>
+                          </div>                                                                     
+                        </div>                     
                         <div class="colo-md-12 text-light">
                           <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="terms" required>
-                            <label for="terms" class="form-check-label">Acepto los terminos y condiciones.</label>
-                          </div>
+                            <label for="terms" class="form-check-label">Acepto los términos y condiciones.</label>
+                          </div>                                             
                         </div>
                         <div class="col-12 d-flex justify-content-center mt-4">
-                          <button type="submit" class="btn btn-secondary w-50">Enviar</button>
-      
+                          <button type="submit" class="btn btn-secondary w-50">Enviar</button>                     
+  
                         </div>
-                      </form>
+                      </form>                                                         
                     </div>
                     <div class="modal-footer bg-dark text-light">
-                      <button class="btn btn-secondary" data-bs-target="#exampleModalToggle"
-                        data-bs-toggle="modal">Volver</button>
-      
+                      <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Volver</button>
+                      
                     </div>
                   </div>
                 </div>
-              </div>
-              <button type="button" class="btn btn-secondary mt-2 ms-1 me-1">Buscar <i class="bi bi-search"></i></button>
-              <button type="button" class="btn btn-secondary mt-2 ms-1 me-1">Descargar <i class="bi bi-download"></i></button>
+              </div>           
+              <button type="button" class="btn mt-2 ms-1 me-1 boton">Buscar <i class="bi bi-search"></i></button>
+              <button type="button" class="btn mt-2 ms-1 me-1 boton">Descargar <i class="bi bi-download"></i></button>
             </div>
           </div>
         </div>
       </nav>
-      
     </header>
     <main>
-      <section class=" sectionContacto">
+      <section class="sectionContacto">
         <img class="imagenContacto" src="./img/4230763.png" alt="">
         <form class="formularioContacto" >
           <div class="inputNombre">
@@ -184,17 +166,43 @@
           </div>
           <div>
             <button class="botonEnviar" type="button">Enviar consulta</button>
-          </div>
-          
+          </div> 
         </form>
-        
       </section>
     </main>
 
-    <footer>
-
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a href="index.html" class="logo">
+              <img src="img/Logo ZONA PLAY ig.png" alt="Logo zona play">
+            </a>
+          </figure>
+        </div>
+        <div class="box-1">
+          <h2>SOBRE NOSOTROS</h2>
+          <a href="sobreNosotros.html">Quienes somos</a>
+          <a href="paginaDeContactos.html">Contacto</a>
+          <a href="#">Política de privacidad</a>
+          <a href="#">Reembolso</a>
+        </div>
+        <div class="box">
+          <h2>SÍGUENOS</h2>
+          <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"></a>
+          </div>
+        </div>
+      </div>
+      <div class="grupo-2">
+        <small>&copy; 2022 <b>ZonaPlay</b> - Todos los derechos reservados.</small>
+      </div>
     </footer>
-      
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
-  </body>
+  <script src="./js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/e04dfe5a58.js" crossorigin="anonymous"></script>
+</body>
 </html>
