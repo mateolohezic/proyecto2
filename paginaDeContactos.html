@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Play</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./paginaDeContactos.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-1" href="./index.html">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-auto">
+              <button type="button" class="btn btn-secondary mt-2 ms-1 me-1" data-bs-toggle="modal" href="#exampleModalToggle"
+                role="button">Iniciar sesion <i class="bi bi-person"></i></button>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+                tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header bg-dark text-light">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Iniciar sesión</h1>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-dark text-light">
+                      <form class="" onsubmit="loginUser()">
+                        <div class="mb-3">
+                          <label for="userLogin" class="form-label">Usuario</label>
+                          <input type="text" class="form-control" id="userLogin" aria-describedby="emailHelp" value=""
+                            required>
+                        </div>
+                        <div class="mb-4">
+                          <label for="passwordLogin" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="passwordLogin" value="" required>
+                        </div>
+                        <div class="error text-danger mb-4" id="error">
+                          <h6>Usuario incorrecto o contraseña incorrecta.</h6>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Ingresar</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer bg-dark text-light">
+                      ¿No tienes una cuenta?
+                      <div data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+                        <a class="text-secondary" href="#exampleModalToggle2">Regístrate</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+                tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header bg-dark text-light">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Regístrate ahora mismo.</h1>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-dark">
+                      <form class="row g-3 was-validated"
+                        oninput='up2.setCustomValidity(up2.value != up.value ? "Las contraseñas no coinciden." : "")' validate
+                        onsubmit="createUser()">
+                        <div class="col-md-6 text-light">
+                          <label for="nameId" class="form-label">Nombre</label>
+                          <input type="text" class="form-control" id="nameId" pattern="[A-Za-z]+" minlength="2" maxlength="22"
+                            value="" required>
+                          <div class="valid-feedback">
+                            Todo bien!
+                          </div>
+                          <div class="invalid-feedback">
+                            Campo requerido.
+                          </div>
+                        </div>
+                        <div class="col-md-6 text-light">
+                          <label for="surnameId" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="surnameId" pattern="[A-Za-z]+" minlength="2"
+                            maxlength="22" value="" required>
+                          <div class="valid-feedback">
+                            Todo bien!
+                          </div>
+                          <div class="invalid-feedback">
+                            Campo requerido.
+                          </div>
+                        </div>
+                        <div class="col-md-6 text-light">
+                          <label for="userId" class="form-label">Usuario</label>
+                          <div class="input-group has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="text" class="form-control" id="userId" aria-describedby="inputGroupPrepend"
+                              pattern="[a-za-z0-9]+" minlength="6" maxlength="16" value="" required>
+                            <div class="valid-feedback">
+                              Todo bien!
+                            </div>
+                            <div class="invalid-feedback">
+                              El usuario tiene que ser de 6 a 16 caracteres y solo puede contener numeros y letras.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 text-light">
+                          <label for="emailId" class="form-label">Correo electrónico</label>
+                          <input type="email" class="form-control" id="emailId" minlength="2" maxlength="32" value=""
+                            required>
+                          <div class="valid-feedback">
+                            Todo bien
+                          </div>
+                          <div class="invalid-feedback">
+                            Campo requerido.
+                          </div>
+                        </div>
+                        <div class="col-md-6 text-light">
+                          <label for="password1" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="password1" minlength="6" maxlength="12" value=""
+                            required name="up">
+                          <div class="valid-feedback">
+                            Todo bien
+                          </div>
+                          <div class="invalid-feedback">
+                            La contraseña tiene que ser de 6 a 12 caracteres.
+                          </div>
+                        </div>
+                        <div class="col-md-6 text-light">
+                          <label for="password2" class="form-label">Repetir contraseña</label>
+                          <input type="password" class="form-control" id="password2" minlength="6" maxlength="10" required
+                            name="up2">
+                          <div class="valid-feedback">
+                            Las contraseñas coinciden
+                          </div>
+                          <div class="invalid-feedback">
+                            Las contraseñas no coinciden
+                          </div>
+                        </div>
+                        <div class="colo-md-12 text-light">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="terms" required>
+                            <label for="terms" class="form-check-label">Acepto los terminos y condiciones.</label>
+                          </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center mt-4">
+                          <button type="submit" class="btn btn-secondary w-50">Enviar</button>
+      
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer bg-dark text-light">
+                      <button class="btn btn-secondary" data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal">Volver</button>
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-secondary mt-2 ms-1 me-1">Buscar <i class="bi bi-search"></i></button>
+              <button type="button" class="btn btn-secondary mt-2 ms-1 me-1">Descargar <i class="bi bi-download"></i></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+    <main>
+      <section class=" sectionContacto">
+        <img class="imagenContacto" src="./img/4230763.png" alt="">
+        <form class="formularioContacto" >
+          <div class="inputNombre">
+            <label class="mb-2" for="nombre">Escriba su nombre</label>
+            <input type="text" required>
+          </div>
+          <div class="inputEmail">
+            <label class="mb-2" for="email">Email</label>
+            <input type="email" required>
+          </div>
+          <div class="areaDeConsulta">
+            <label class="mb-2" for="consulta">Diganos su consulta</label>
+            <textarea cols="60" rows="6"></textarea>
+          </div>
+          <div>
+            <button class="botonEnviar" type="button">Enviar consulta</button>
+          </div>
+          
+        </form>
+        
+      </section>
+    </main>
+
+    <footer>
+
+    </footer>
+      
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+  </body>
+</html>
