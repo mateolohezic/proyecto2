@@ -9,12 +9,25 @@
       "id": 1
     },
     {
-      "name": "mateo",
-      "surname": "lohezic",
-      "user": "mateoo",
-      "email": "adsas@sd",
+      "name": "Mateo",
+      "surname": "Lohezic",
+      "user": "mateolohezic",
+      "email": "mateolohezic@gmail.com",
       "password": "1234567",
       "id": 2
+    }
+  ],
+
+  "games": [
+    {
+     "title": "",
+     "date":"",
+     "price":"",
+     "synopsis":"",
+     "categories":[
+      "terror",
+      "action"
+    ]
     }
   ]
 }
