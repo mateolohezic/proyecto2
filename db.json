@@ -17,5 +17,48 @@
       "id": 2
     }
   ],
-  "games": [ ]
+  "games": [
+    {
+      "title": "LOL",
+      "date": "2020",
+      "price": "21491",
+      "synopsis": "owakdald",
+      "categorie": "Carreras",
+      "developer": "riot",
+      "rating": "3",
+      "image1": "kld",
+      "image2": "lkma",
+      "image3": "sdlkmamkldssklm",
+      "image4": "dmklaklmsdmkl",
+      "id": 1
+    },
+    {
+      "title": "counter",
+      "date": "2020",
+      "price": "19401",
+      "synopsis": "mkwldlmaks",
+      "categorie": "Carreras",
+      "developer": "aoskldsalmk",
+      "rating": "4",
+      "image1": "mdklasmkl",
+      "image2": "dklmdmkl",
+      "image3": "sakmdl",
+      "image4": "sdamkl",
+      "id": 2
+    },
+    {
+      "title": "Age of empires",
+      "date": "2020",
+      "price": "2190",
+      "synopsis": "odkmqlwlkmda",
+      "categorie": "Estrategia",
+      "developer": "aoksldmsakl",
+      "rating": "1",
+      "image1": "mldakm",
+      "image2": "saklmda",
+      "image3": "kmdlaskldkl",
+      "image4": "msdakmlasdklm",
+      "id": 3
+    }
+  ]
 }
