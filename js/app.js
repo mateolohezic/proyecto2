@@ -31,8 +31,6 @@ const loginUser = async () => {
   }
 }
 
-loginUser()
-
 const createUser = () => {
   const name = document.getElementById('nameId').value
   const surname = document.getElementById('surnameId').value
