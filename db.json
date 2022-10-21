@@ -17,17 +17,20 @@
       "id": 2
     }
   ],
-
   "games": [
     {
-     "title": "",
-     "date":"",
-     "price":"",
-     "synopsis":"",
-     "categories":[
-      "terror",
-      "action"
-    ]
+      "title": "",
+      "date": "",
+      "price": "",
+      "synopsis": "",
+      "categorie": "",
+      "developer": "",
+      "rating": "",
+      "favorite": "",
+      "image1":"",
+      "image2":"",
+      "image3":"",
+      "image4":""
     }
   ]
 }
