@@ -17,21 +17,5 @@
       "id": 2
     }
   ],
-  "games": [
-    {
-      "title": "LOL",
-      "date": "2020",
-      "price": "11190",
-      "synopsis": "akmsldamlsd",
-      "categorie": "Estrategia",
-      "developer": "riot",
-      "rating": "1",
-      "favorite": "",
-      "image1": "daklsmdlkmasklmd",
-      "image2": "mdsa",
-      "image3": "klmdaklm",
-      "image4": "dklmsalkm",
-      "id": 1
-    }
-  ]
+  "games": [ ]
 }
