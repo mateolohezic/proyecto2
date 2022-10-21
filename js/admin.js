@@ -1,6 +1,6 @@
 const getJuegos = async () => {
     const resultado = await fetch("http://localhost:3000/games");
-    const juegos = await resultado;
+    const juegos = await resultado.json();
     return console.log(juegos);
 }
 
