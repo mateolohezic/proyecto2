@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.bodyy{
+  background-color: #2B2E4A;
+}
+
 .error{
   display: none;
 }
