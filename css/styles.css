@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.bodyy{
+  background-color: #2B2E4A;
+}
+
 .error{
   display: none;
 }
@@ -114,6 +119,34 @@ padding: 45px 0px;
 .pie-pagina .grupo-2 small{
   font-size: 15px;
 }
+
+/* CAROUSEL */
+.card {
+  margin: auto;
+  border: none;
+  box-shadow: 0 0 10px 10px;
+}
+.card-body {
+  background-color: #53354A;
+}
+
+.card-body h5 {
+  color: aliceblue;
+  font-weight: 800;
+}
+
+.card-body p {
+  color: aliceblue;
+}
+
+.padding-right {
+  padding-right: 0 !important;
+}
+
+.carousel-item {
+  transition :transform .6s ease-in-out !important;
+}
+
 @media screen and (max-width:800px) {
   .pie-pagina .grupo-1{
     width: 90%;
