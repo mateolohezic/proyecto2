@@ -139,6 +139,13 @@ padding: 45px 0px;
   color: aliceblue;
 }
 
+.padding-right {
+  padding-right: 0 !important;
+}
+
+.carousel-item {
+  transition :transform .6s ease-in-out !important;
+}
 
 @media screen and (max-width:800px) {
   .pie-pagina .grupo-1{
