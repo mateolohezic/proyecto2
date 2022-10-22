@@ -19,9 +19,9 @@ const loginUser = async () => {
   const userType = document.getElementById('userLogin').value
   const passwordType = document.getElementById('passwordLogin').value
   const replace = document.getElementById('error')
-  const results = await fetch('http://localhost:3000/user');
+  const results = await fetch('http://localhost:3000/users');
   const users = await results.json()
-  const user = users.find(user => user.user === userType);
+  const user = users.find(users => users.user === userType);
 
   if (user.password === passwordType) {
     localStorage.setItem('role', user.role)
@@ -38,7 +38,7 @@ const createUser = () => {
   const email = document.getElementById('emailId').value
   const password = document.getElementById('password1').value
 
-  fetch('http://localhost:3000/user', {
+  fetch('http://localhost:3000/users', {
     method: 'POST',
     body: JSON.stringify({
       name,
