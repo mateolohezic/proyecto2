@@ -116,7 +116,7 @@ const imprimirTabla = async () => {
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-danger" onclick="editarJuego(${juego.id})">Editar</button>
+                  <button type="submit" class="btn btn-danger" onclick="editarJuego(${juego.id})">Editar</button>
                 </div>
               </form>
             </div>

@@ -17,54 +17,5 @@
       "id": 2
     }
   ],
-  "games": [
-    {
-      "title": "League Of Legends",
-      "date": "2010",
-      "price": "490",
-      "synopsis": "Juego de estilo MOBA",
-      "categorie": "Carreras",
-      "developer": "Riot Games",
-      "rating": "5",
-      "favorite": true,
-      "published": true,
-      "image1": "url1",
-      "image2": "url2",
-      "image3": "url3",
-      "image4": "url4",
-      "id": 1
-    },
-    {
-      "title": "Counter",
-      "date": "2012",
-      "price": "5000",
-      "synopsis": "Juego de disparos",
-      "categorie": "Carreras",
-      "developer": "VALVE",
-      "rating": "N/A",
-      "favorite": false,
-      "published": true,
-      "image1": "url1",
-      "image2": "url2",
-      "image3": "url3",
-      "image4": "url4",
-      "id": 2
-    },
-    {
-      "title": "Among Us",
-      "date": "2020112",
-      "price": "21212221",
-      "synopsis": "asd",
-      "categorie": "N/A",
-      "developer": "asdasd",
-      "rating": "N/A",
-      "favorite": false,
-      "published": true,
-      "image1": "asd",
-      "image2": "asd",
-      "image3": "asd",
-      "image4": "asd",
-      "id": 3
-    }
-  ]
+  "games": []
 }

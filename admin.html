@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/admin.css">
         <link rel="stylesheet" href="./css/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -38,7 +37,7 @@
       <main>
         <section>
           <div class="my-5 text-center">Página de Administración</div>
-          <div class="container-fluid row text-center justify-content-center mt-5 m-0 p-0">
+          <div class="container-fluid row text-center justify-content-center mt-5 mb-5 m-0 p-0">
             <div class="col-12">
               <div class="text-end mb-4">
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#añadirJuego"><i class="bi bi-plus-circle-fill"></i> Añadir</button>
@@ -134,21 +133,23 @@
                   </div>
                 </div>
               </section>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>Codigo</th>
-                    <th>Nombre</th>
-                    <th>Categoria</th>
-                    <th>Descripcion</th>
-                    <th>Precio</th>
-                    <th>Publicado</th>
-                    <th>Opciones</th>
-                  </tr>
-                </thead>
-                <tbody id="tabla">
-                </tbody>
-              </table>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Codigo</th>
+                      <th>Nombre</th>
+                      <th>Categoria</th>
+                      <th>Descripcion</th>
+                      <th>Precio</th>
+                      <th>Publicado</th>
+                      <th>Opciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabla">
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </section>
