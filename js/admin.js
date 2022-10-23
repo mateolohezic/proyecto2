@@ -13,8 +13,8 @@ const imprimirTabla = async () => {
     const filas = juegos.map(juego => (
     `
     <tr>
-        <td>${juego.id}<img src="./img/404.png" alt="" width="0" height="0" onload= "imprimirFavorito(${juego.id})"></td>
-        <td>${juego.title}<img src="./img/404.png" alt="" width="0" height="0" onload= "imprimirPublicado(${juego.id})"></td>
+        <td>${juego.id}<img src="./img/404.png"width="0" height="0" onload= "imprimirFavorito(${juego.id})"></td>
+        <td>${juego.title}<img src="./img/404.png"width="0" height="0" onload= "imprimirPublicado(${juego.id})"></td>
         <td>${juego.categorie}</td>
         <td>${juego.synopsis}</td>
         <td>$ ${juego.price}</td>
