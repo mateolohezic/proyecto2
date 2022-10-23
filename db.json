@@ -6,6 +6,7 @@
       "user": "francoragout",
       "email": "francoragout1@gmail.com",
       "password": "12345678",
+      "role": "usuario",
       "id": 1
     },
     {
@@ -14,7 +15,16 @@
       "user": "mateolohezic",
       "email": "mateolohezic@gmail.com",
       "password": "1234567",
+      "role": "admin",
       "id": 2
+    },
+    {
+      "name": "Messi",
+      "surname": "Messssiii",
+      "user": "messii",
+      "email": "messi@gmail.com",
+      "password": "messi1",
+      "id": 3
     }
   ],
   "games": [
@@ -23,16 +33,85 @@
       "date": "2017",
       "price": "500",
       "synopsis": "Age of Empires es una serie de videojuegos que en su mayoría pertenecen al género videojuego de estrategia en tiempo real, y hay otros juegos que pertenecen a otros géneros. La mayoría de los juegos son para la plataforma PC, y otros juegos son de otras plataformas.",
-      "categorie": "Estrategia",
+      "categorie": "Acción",
       "developer": "Ensemble Studios",
       "rating": "4",
       "favorite": false,
-      "published": false,
+      "published": true,
+      "portada": "https://www.wsgf.org/f/u/imagecache/node-gallery-display/contrib/dr/30076/ingame_16x9.png",
       "image1": "https://rosarionuestro.com/wp-content/uploads/2018/02/Age-of-Empires-Definitive-Edition.jpg",
       "image2": "https://www.wsgf.org/f/u/imagecache/node-gallery-display/contrib/dr/30076/ingame_16x9.png",
       "image3": "https://www.gamereactor.es/media/78/ageempires_2367863b.jpg",
-      "image4": "https://as01.epimg.net/meristation/imagenes/2019/06/11/album/1560207077_225227_1560207549_album_grande.jpg",
+      "image4": "https://alfabetajuega.com/hero/2019/06/Age-of-Empires-Definitive-Edition.jpg?width=768&aspect_ratio=16:9&format=nowebp",
       "id": 1
+    },
+    {
+      "title": "Counter",
+      "date": "2012",
+      "price": "200",
+      "synopsis": "Hola este es el counter",
+      "categorie": "Acción",
+      "developer": "VALVE",
+      "rating": "3",
+      "favorite": false,
+      "published": false,
+      "portada": "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427",
+      "image1": "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427",
+      "image2": "12asd",
+      "image3": "asdasdas",
+      "image4": "asdasd",
+      "id": 2
+    },
+    {
+      "title": "Counter Estrategia",
+      "date": "2012",
+      "price": "200",
+      "synopsis": "Hola este es el counter",
+      "categorie": "Estrategia",
+      "developer": "VALVE",
+      "rating": "3",
+      "favorite": false,
+      "published": true,
+      "portada": "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427",
+      "image1": "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427",
+      "image2": "12asd",
+      "image3": "asdasdas",
+      "image4": "asdasd",
+      "id": 3
+    },
+    {
+      "title": "Counter Terror",
+      "date": "2012",
+      "price": "200",
+      "synopsis": "Hola este es el counter",
+      "categorie": "Terror",
+      "developer": "VALVE",
+      "rating": "3",
+      "favorite": false,
+      "published": true,
+      "portada": "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427",
+      "image1": "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427",
+      "image2": "12asd",
+      "image3": "asdasdas",
+      "image4": "asdasd",
+      "id": 4
+    },
+    {
+      "title": "Counter Carreras",
+      "date": "2012",
+      "price": "200",
+      "synopsis": "Hola este es el counter",
+      "categorie": "Carreras",
+      "developer": "VALVE",
+      "rating": "3",
+      "favorite": false,
+      "published": true,
+      "portada": "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427",
+      "image1": "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427",
+      "image2": "12asd",
+      "image3": "asdasdas",
+      "image4": "asdasd",
+      "id": 5
     }
   ]
 }

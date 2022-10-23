@@ -116,7 +116,7 @@ const imprimirTabla = async () => {
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-danger" onclick="editarJuego(${juego.id})">Editar</button>
+                  <button type="button" class="btn btn-danger" onclick="editarJuego(${juego.id})">Editar</button>
                 </div>
               </form>
             </div>
@@ -141,6 +141,7 @@ const crearJuego = () =>{
         const categorie = document.getElementById ("categorie").value
         const developer = document.getElementById ("developer").value
         const rating = document.getElementById ("rating").value
+        const portada = document.getElementById ("image1").value
         const image1 = document.getElementById ("image1").value
         const image2 = document.getElementById ("image2").value
         const image3 = document.getElementById ("image3").value
@@ -161,6 +162,7 @@ const crearJuego = () =>{
                 rating,
                 favorite,
                 published,
+                portada,
                 image1,
                 image2,
                 image3,
@@ -186,6 +188,7 @@ const editarJuego = (id) =>{
     const categorie = document.getElementById (`ecategorie${x}`).value
     const developer = document.getElementById (`edeveloper${x}`).value
     const rating = document.getElementById (`erating${x}`).value
+    const portada = document.getElementById (`eimage1${x}`).value
     const image1 = document.getElementById (`eimage1${x}`).value
     const image2 = document.getElementById (`eimage2${x}`).value
     const image3 = document.getElementById (`eimage3${x}`).value
@@ -206,6 +209,7 @@ const editarJuego = (id) =>{
             rating,
             favorite,
             published,
+            portada,
             image1,
             image2,
             image3,
@@ -329,4 +333,9 @@ const quitarPublicado = (id) =>{
     },
   })
 
+}
+
+const cerrarSesion = () =>{
+  localStorage.setItem ("role", "nologin")
+  window.location.href= "./index.html"
 }

@@ -2,6 +2,11 @@
 
 .bodyy{
   background-color: #2B2E4A;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.fuente{
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .error{
@@ -23,8 +28,8 @@
   color: antiquewhite;
   text-align: center;
   display: block;
-  font-family: 'Open Sans', sans-serif;
   transition: all 300ms ease;
+  font-family: 'Ubuntu', sans-serif;
 }
 .navbar .boton:hover{
   background-color: #E84545;
@@ -40,7 +45,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 .pie-pagina{
 width: 100%;
@@ -139,13 +144,6 @@ padding: 45px 0px;
   color: aliceblue;
 }
 
-.padding-right {
-  padding-right: 0 !important;
-}
-
-.carousel-item {
-  transition :transform .6s ease-in-out !important;
-}
 
 @media screen and (max-width:800px) {
   .pie-pagina .grupo-1{
@@ -154,8 +152,33 @@ padding: 45px 0px;
     grid-gap: 30px;
     padding: 35px 0px;
     }
+    
+  .imagencarousel{
+    height: 20vh;
+  }
+
+  .descripcionCard{
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+  }
+  .tamañoFuente{
+  font-size: 1rem;
+  }
+}
+@media (min-width:800px) {
+.imagencarousel{
+  height: 60vh;
 }
 
-.imagencarousel{
-  height: 300px;
+.tamañoFuente{
+  font-size: calc(1.3rem + .6vw);
+}
+}
+
+.tituloCard{
+  text-align: center;
 }
