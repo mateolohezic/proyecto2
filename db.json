@@ -17,5 +17,22 @@
       "id": 2
     }
   ],
-  "games": []
+  "games": [
+    {
+      "title": "Age Of Empires Definitive Edition",
+      "date": "2017",
+      "price": "500",
+      "synopsis": "Age of Empires es una serie de videojuegos que en su mayoría pertenecen al género videojuego de estrategia en tiempo real, y hay otros juegos que pertenecen a otros géneros. La mayoría de los juegos son para la plataforma PC, y otros juegos son de otras plataformas.",
+      "categorie": "Estrategia",
+      "developer": "Ensemble Studios",
+      "rating": "4",
+      "favorite": false,
+      "published": false,
+      "image1": "https://rosarionuestro.com/wp-content/uploads/2018/02/Age-of-Empires-Definitive-Edition.jpg",
+      "image2": "https://www.wsgf.org/f/u/imagecache/node-gallery-display/contrib/dr/30076/ingame_16x9.png",
+      "image3": "https://www.gamereactor.es/media/78/ageempires_2367863b.jpg",
+      "image4": "https://as01.epimg.net/meristation/imagenes/2019/06/11/album/1560207077_225227_1560207549_album_grande.jpg",
+      "id": 1
+    }
+  ]
 }
