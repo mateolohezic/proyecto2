@@ -182,3 +182,52 @@ padding: 45px 0px;
 .tituloCard{
   text-align: center;
 }
+
+.searchCardBody{
+  border: 3px solid #2B2E4A;
+  background-color: #2B2E4A;
+}
+
+.searchCardBody:hover{
+  cursor: pointer;
+  background-color: #53354A;
+}
+
+.barraBusqueda{
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.searchCard{
+  display: grid;
+}
+
+.hideCard{
+  display: none;
+}
+
+.imagenSearch{
+  height: 7vh;
+  width: 10vh;
+}
+
+@media (max-width: 991px) {
+  .divBotonNav{
+    display: flex;
+    justify-content: center;
+  }
+  .boton{
+    width: 100%;
+  }
+  .launcherBoton{
+    display: none;
+  }
+  .botonBusqueda{
+    margin-top: -0.7rem;
+    margin-bottom: 0.5rem;
+  }
+  .botonSesion{
+    margin-top: 1rem;
+  }
+}

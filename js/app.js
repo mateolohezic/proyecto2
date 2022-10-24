@@ -23,7 +23,7 @@ const loginUser = async () => {
   const users = await results.json()
   const user = users.find(users => users.user === userType);
 
-  if (user.password === passwordType) {
+  if (user.password === passwordType && user.confirm == "verificado") {
     localStorage.setItem('role', user.role)
     window.location.reload();
   } else {
@@ -38,6 +38,7 @@ const createUser = () => {
   const email = document.getElementById('emailId').value
   const password = document.getElementById('password1').value
   const role = document.getElementById('roleId').value
+  const confirm = "pendiente"
 
   fetch('http://localhost:3000/users', {
     method: 'POST',
@@ -47,7 +48,8 @@ const createUser = () => {
       user,
       email,
       password,
-      role
+      role,
+      confirm
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -69,13 +71,23 @@ const imprimirBoton = () =>{
   boton.innerHTML = `<button type="button" class="btn mt-2 ms-1 me-1 boton" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Iniciar sesión <i class="bi bi-person"></i></button>`
   cerrarSesion.innerHTML = ``
   } else if (rol == "admin"){
-    boton.innerHTML = `<a href="./admin.html" class="text-decoration-none text-light"><button type="button" class="btn mt-2 ms-1 me-1 boton">Administración <i class="bi bi-gear-fill"></i></button></a>`
+    boton.innerHTML = `
+    <div class="dropdown">
+      <button type="button" class="btn mt-2 ms-1 me-1 boton dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Administración <i class="bi bi-gear-fill"></i></button>
+      <ul class="dropdown-menu bg-secondary">
+        <li><a class="dropdown-item text-white" href="./admin.html">Juegos</a></li>
+        <li><a class="dropdown-item text-white" href="./users.html">Usuarios</a></li>
+      </ul>
+    </div>
+    `
     cerrarSesion.innerHTML = `<button type="button" class="btn mt-2 ms-1 me-1 boton" onclick="cerrarSesion()">Cerrar Sesión <i class="bi bi-door-open-fill"></i></button>`
   } else if (rol == "usuario"){
     boton.innerHTML = `<button type="button" class="btn mt-2 ms-1 me-1 boton" onclick="cerrarSesion()">Cerrar Sesión <i class="bi bi-door-open-fill"></i></button>`
     cerrarSesion.innerHTML = ``
+  } else if ( rol == undefined){
+    boton.innerHTML = `<button type="button" class="btn mt-2 ms-1 me-1 boton" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Iniciar sesión <i class="bi bi-person"></i></button>`
+    cerrarSesion.innerHTML = ``
   }
-
 }
 
 imprimirBoton()
@@ -84,6 +96,12 @@ const getJuegos = async () => {
   const resultado = await fetch('http://localhost:3000/games/');
   const resultados = await resultado.json();
   return resultados;
+}
+
+const getJuegosPublicados = async () => {
+  juegos = await getJuegos()
+  const juegosPublicados = juegos.filter(juego => juego.published == true )
+  return juegosPublicados
 }
 
 const getAccion = async () => {
@@ -206,14 +224,13 @@ const imprimirCarreras = async () => {
             <h5 class="card-title fuente tituloCard mt-3 mb-4 tamañoFuente">${juego.title}</h5>
             <p class="card-text fuente descripcionCard">${juego.synopsis}</p>
             <div class="d-flex flex-row-reverse fuente">
-              <button type="button" class="btn btn-danger" onclick="setX(${juego.id}})">Ver más</button>  
+              <button type="button" class="btn btn-danger" onclick="setX(${juego.id})">Ver más</button>  
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
   `)).join('')
 
   carousel.innerHTML = juegosDelCarousel
@@ -226,22 +243,22 @@ const imprimirEstrategia = async () => {
   const carousel = document.getElementById ("imprimirEstrategia");
 
   const juegosDelCarousel = juegos.map(juego => (`
-  <div class="carousel-item">
-    <div class="row justify-content-center">
-      <div class="col-6">
-        <div class="card border-0">
-          <img src="${juego.image1}" class="card-img-top imagencarousel border-bottom border-5 border-dark border-primary">
-          <div class="card-body ">
-            <h5 class="card-title fuente tituloCard mt-3 mb-4 tamañoFuente">${juego.title}</h5>
-            <p class="card-text fuente descripcionCard">${juego.synopsis}</p>
-            <div class="d-flex flex-row-reverse fuente">
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="card border-0">
+            <img src="${juego.image1}" class="card-img-top imagencarousel border-bottom border-5 border-dark border-primary">
+            <div class="card-body ">
+              <h5 class="card-title fuente tituloCard mt-3 mb-4 tamañoFuente">${juego.title}</h5>
+              <p class="card-text fuente descripcionCard">${juego.synopsis}</p>
+              <div class="d-flex flex-row-reverse fuente">
                 <button type="button" class="btn btn-danger" onclick="setX(${juego.id})">Ver más</button>  
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   
   `)).join('')
 
@@ -254,3 +271,39 @@ const setX = (id) =>{
   localStorage.setItem("id", id)
   window.location.href= "./game.html"
 }
+
+
+const coinciden = async (valor) => {
+  juegos = await getJuegos()
+  const letras = valor
+  const juegosCoinciden = juegos.filter(juego => juego.title.includes(`${letras}`) || juego.categorie.includes(`${letras}`) || juego.date.includes(`${letras}`) || juego.price.includes(`${letras}`) || juego.developer.includes(`${letras}`))
+  return juegosCoinciden
+}
+
+const barraSearch = (juegosCoinciden) =>{
+  
+  const juegos = juegosCoinciden
+  const cards = document.getElementById(`searchCards`)
+  const juegosCards = juegos.map(juego => (`
+
+  <div class="searchCard" onclick="setX(${juego.id})">
+    <div class="searchCardBody mt-4 p-3">
+      <div class="text-center">
+        <div class="text-white fs-5">${juego.title}</div>
+      </div>
+    </div>
+  </div>
+  `)).join('')
+
+  cards.innerHTML = juegosCards
+
+}
+
+const barraCoinciden = async () =>{
+  const barraBusqueda = document.getElementById (`search`)
+  const valor = barraBusqueda.value
+  const juegosCoincidentes = await coinciden (valor)
+  return barraSearch(juegosCoincidentes)
+}
+
+
