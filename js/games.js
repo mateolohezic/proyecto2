@@ -129,3 +129,6 @@ const imprimirRating = async () => {
 }
 
 imprimirRating()
+
+
+

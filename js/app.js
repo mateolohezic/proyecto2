@@ -276,7 +276,7 @@ const setX = (id) =>{
 const coinciden = async (valor) => {
   juegos = await getJuegos()
   const letras = valor
-  const juegosCoinciden = juegos.filter(juego => juego.title.includes(`${letras}`) || juego.categorie.includes(`${letras}`) || juego.date.includes(`${letras}`) || juego.price.includes(`${letras}`) || juego.developer.includes(`${letras}`))
+  const juegosCoinciden = juegos.filter(juego => juego.title.includes(`${letras}`) || juego.categorie.includes(`${letras}`) || juego.date.includes(`${letras}`) || juego.price.includes(`${letras}`) || juego.developer.includes(`${letras}`) || juego.title.toLowerCase().includes(`${letras}`) || juego.categorie.toLowerCase().includes(`${letras}`) || juego.developer.toLowerCase().includes(`${letras}`))
   return juegosCoinciden
 }
 

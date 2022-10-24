@@ -1,6 +1,7 @@
 const getJuegos = async () => {
     const resultado = await fetch('http://localhost:3000/games/');
     const resultados = await resultado.json();
+    resultados.sort((a, b) => +b.favorite-a.favorite)
     return resultados;
 }
 
@@ -260,7 +261,7 @@ const quitarTodosFavoritos = async () =>{
 }
 
 const agregarFavorito = async (id) =>{ 
-    await quitarTodosFavoritos();
+    // await quitarTodosFavoritos();
     const favorite = true
 
     fetch(`http://localhost:3000/games/${id}`, {
