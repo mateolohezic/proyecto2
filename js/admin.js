@@ -261,7 +261,7 @@ const quitarTodosFavoritos = async () =>{
 }
 
 const agregarFavorito = async (id) =>{ 
-    // await quitarTodosFavoritos();
+    await quitarTodosFavoritos();
     const favorite = true
 
     fetch(`http://localhost:3000/games/${id}`, {

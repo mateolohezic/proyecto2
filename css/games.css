@@ -59,14 +59,11 @@
 }
 
 .imagencarrousel{
-    height: 20vh;
+    height: 40vh;
 }
 @media (max-width: 770px){
     .volverinicio {
         font-size: 20px;
-    }
-    .cajagrandeizq{
-        height: 30%;
     }
     .cajagrandeder{
         height: 70%;
@@ -81,7 +78,7 @@
         visibility: hidden;
     }
     .cajagrandeizq{
-        height: 35%;
+        height: 60vh;
     }
     .cajagrandeder{
         height: 65%;
@@ -105,12 +102,20 @@
         left: 0;
         z-index: 1030;
     }
+    .fixedBottom {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
 }
 
 .cajagrandeder{
     background-color: #E84545;
     z-index: 2;
     color: white;
+    overflow: auto;
 }
 
 .btn-darkk {

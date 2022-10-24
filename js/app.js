@@ -72,8 +72,8 @@ const imprimirBoton = () =>{
   cerrarSesion.innerHTML = ``
   } else if (rol == "admin"){
     boton.innerHTML = `
-    <div class="dropdown">
-      <button type="button" class="btn mt-2 ms-1 me-1 boton dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Administración <i class="bi bi-gear-fill"></i></button>
+    <div class="dropdown botonDropdown">
+      <button type="button" class="btn mt-2 me-1 boton dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Administración <i class="bi bi-gear-fill"></i></button>
       <ul class="dropdown-menu bg-secondary">
         <li><a class="dropdown-item text-white" href="./admin.html">Juegos</a></li>
         <li><a class="dropdown-item text-white" href="./users.html">Usuarios</a></li>
@@ -102,6 +102,12 @@ const getJuegosPublicados = async () => {
   juegos = await getJuegos()
   const juegosPublicados = juegos.filter(juego => juego.published == true )
   return juegosPublicados
+}
+
+const getDestacado = async () => {
+  juegos = await getJuegos()
+  const juegosDestacado = juegos.filter(juego => juego.favorite == true )
+  return juegosDestacado
 }
 
 const getAccion = async () => {
@@ -272,7 +278,6 @@ const setX = (id) =>{
   window.location.href= "./game.html"
 }
 
-
 const coinciden = async (valor) => {
   juegos = await getJuegos()
   const letras = valor
@@ -306,4 +311,28 @@ const barraCoinciden = async () =>{
   return barraSearch(juegosCoincidentes)
 }
 
+const imprimirDestacado = async () => {
+  const juegos = await getDestacado();
+  const juego = juegos[0]
+  const imagen1 = document.getElementById ("imagen1");
+  const imagen2 = document.getElementById ("imagen2");
+  const imagen3 = document.getElementById ("imagen3");
 
+  imagen1.innerHTML = (`
+  <img src="${juego.image1}" class="d-block w-100" onclick="setX(${juego.id})">
+  <div class="carousel-caption d-none d-md-block">
+    <h5 class="text-light fs-5 text-center mt-5 badge bg-secondary bg-opacity-50 text-wrap w-100">${juego.title}</h5>
+  </div>
+  
+  `)
+
+  imagen2.innerHTML = (`
+  <img src="${juego.image2}" class="d-block w-100" onclick="setX(${juego.id})">
+  `)
+
+  imagen3.innerHTML = (`
+  <img src="${juego.image3}" class="d-block w-100" onclick="setX(${juego.id})">
+  `)
+}
+
+imprimirDestacado()

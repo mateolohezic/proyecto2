@@ -89,13 +89,14 @@ const cambiarPortada = async (imagen) => {
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-md-12 cajagrandeder">
         <div class="column text-start ms-4 me-2">
             <div class="container mt-5 fs-1">${juego.title}</div>
+            <div class="container fs-3 text-white" id="precioJuego"></div>
             <div class="container fs-6 text-white text-opacity-75">${juego.developer}</div>
             <div class="container fs-6 text-white text-opacity-75">Etiquetas: ${juego.categorie}</div>
             <div class="container fs-6 text-white text-opacity-75">Fecha de Estreno: ${juego.date}</div>
             <div class="container fs-6 text-white text-opacity-75" id="estrellasRating"></div>
-            <div class="container mt-5 fs-5">${juego.synopsis}</div>
+            <div class="container mt-5 fs-5 mb-5">${juego.synopsis}</div>
         </div>
-        <div class="d-flex flex-row-reverse fixed-bottom m-5">
+        <div class="d-flex flex-row-reverse fixedBottom m-5">
             <a href="./404.html"><button type="button" class="btn btn-darkk btn-lg">Comprar</button></a>
 
         </div>
@@ -105,6 +106,19 @@ const cambiarPortada = async (imagen) => {
 }
 
 imprimirJuego()
+
+const imprimirPrecio = async () => {
+    const juego = await getJuego();
+    const detalles = document.getElementById ("precioJuego");
+
+    if (juego.price == "0"){
+    detalles.innerHTML = (`Gratis`)
+    }else{
+    detalles.innerHTML = (`$ ${juego.price} ARS`)
+    }
+}
+
+imprimirPrecio()
 
 const imprimirRating = async () => {
     const juego = await getJuego();
