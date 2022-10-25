@@ -37,7 +37,7 @@
       "email": "alechasampi@gmail.com",
       "password": "123123",
       "role": "usuario",
-      "confirm": "pendiente",
+      "confirm": "verificado",
       "id": 4
     },
     {
@@ -47,7 +47,7 @@
       "email": "crisbarrionuevo@gmail.com",
       "password": "123123",
       "role": "usuario",
-      "confirm": "pendiente",
+      "confirm": "verificado",
       "id": 5
     }
   ],
@@ -130,7 +130,7 @@
       "rating": "5",
       "favorite": false,
       "published": true,
-      "portada": "https://assets.reedpopcdn.com/-1522310570379.jpg/BROK/resize/690%3E/format/jpg/quality/75/-1522310570379.jpg",
+      "portada": "https://images.hdqwalls.com/download/outlast-2-2017-pic-1600x900.jpg",
       "image1": "https://assets.reedpopcdn.com/-1522310570379.jpg/BROK/resize/690%3E/format/jpg/quality/75/-1522310570379.jpg",
       "image2": "https://assets.reedpopcdn.com/outlast-2-patch-makes-game-easier-on-normal-1494237230703.jpg/BROK/resize/690%3E/format/jpg/quality/75/outlast-2-patch-makes-game-easier-on-normal-1494237230703.jpg",
       "image3": "https://images.hdqwalls.com/download/outlast-2-2017-pic-1600x900.jpg",
@@ -334,7 +334,7 @@
       "rating": "1",
       "favorite": false,
       "published": true,
-      "portada": "https://as01.epimg.net/meristation/imagenes/2020/10/04/header_image/875065311601806430.jpg",
+      "portada": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/KSPLI753P5BHTFWJD6DUX7HHT4.jpg",
       "image1": "https://as01.epimg.net/meristation/imagenes/2020/10/04/header_image/875065311601806430.jpg",
       "image2": "https://as01.epimg.net/meristation/imagenes/2022/10/20/noticias/1666250569_716887_1666250749_noticia_normal.jpg",
       "image3": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/KSPLI753P5BHTFWJD6DUX7HHT4.jpg",

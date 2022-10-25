@@ -47,6 +47,7 @@ const eliminarUser = (id) =>{
   fetch(`http://localhost:3000/users/${id}`, {
     method: 'DELETE',
   });
+  location.reload();
 }
 
 const imprimirVerificado = async (id) =>{
@@ -77,6 +78,7 @@ const verificar = async (id) =>{
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
+  location.reload();
 }
 
 const suspender = (id) =>{
@@ -92,6 +94,7 @@ const suspender = (id) =>{
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
+  location.reload();
 }
 
 const imprimirPermisos = async (id) =>{
@@ -119,6 +122,7 @@ const hacerUser = (id) =>{
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
+  location.reload();
 }
 
 const hacerAdmin = (id) =>{
@@ -133,7 +137,7 @@ const hacerAdmin = (id) =>{
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
-
+  location.reload();
 }
 
 const cerrarSesion = () =>{
