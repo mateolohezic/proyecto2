@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .navbar .boton{
   background-color: #2B2E4A;
   color: antiquewhite;
@@ -29,26 +30,32 @@
   transition: all 300ms ease;
   font-family: 'Ubuntu', sans-serif;
 }
+
 .navbar .boton:hover{
   background-color: #E84545;
 }
+
 .registro{
   color: #E84545;
   text-decoration: none;
 }
+
 .registro:hover{
   color: #903749;
 }
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
 }
+
 .pie-pagina{
 width: 100%;
 background-color: #903749;
 }
+
 .pie-pagina .grupo-1{
 width: 100%;
 max-width: 2000px;
@@ -58,6 +65,7 @@ grid-template-columns: repeat(3, .5fr);
 grid-gap: 50px;
 padding: 45px 0px;
 }
+
 .pie-pagina .grupo-1 .box figure{
     width: 100%;
     height: 100%;
@@ -65,27 +73,33 @@ padding: 45px 0px;
     justify-content: center;
     align-items: center;   
 }
+
 .pie-pagina .grupo-1 .box .logo{
   display: inline-block;
   transition: all 1s ease-out;
 }
+
 .pie-pagina .grupo-1 .box .logo:hover {
   background-color: #E84545;
   border-radius: 100%;
 }
+
 .pie-pagina .grupo-1 .box figure img{
   width: 175px;
 }
+
 .pie-pagina .grupo-1 .box h2{
   color: rgb(212, 216, 220);
   margin-bottom: 25px;
   font-size: 20px;
 }
+
 .pie-pagina .grupo-1 .box-1 h2{
   color: rgb(212, 216, 220);
   margin-bottom: 25px;
   font-size: 20px;
 }
+
 .pie-pagina .grupo-1 .box-1 a{
   display: block;
   text-decoration: none;
@@ -94,9 +108,11 @@ padding: 45px 0px;
   margin-bottom: 10px;
   transition: all 300ms ease;
 }
+
 .pie-pagina .grupo-1 .box-1 a:hover{
   color: #E84545;
 }
+
 .pie-pagina .grupo-1 .redes a{
   display: inline-block;
   text-decoration: none;
@@ -110,25 +126,28 @@ padding: 45px 0px;
   text-align: center;
   transition: all 300ms ease;
 }
+
 .pie-pagina .grupo-1 .redes a:hover{
   color: #E84545;
 }
+
 .pie-pagina .grupo-2{
   background-color: #53354A;
   padding: 15px 10px;
   text-align: center;
   color: rgb(172, 173, 173);
 }
+
 .pie-pagina .grupo-2 small{
   font-size: 15px;
 }
 
-/* CAROUSEL */
 .card {
   margin: auto;
   border: none;
   box-shadow: 0 0 10px 10px;
 }
+
 .card-body {
   background-color: #53354A;
 }
@@ -141,7 +160,6 @@ padding: 45px 0px;
 .card-body p {
   color: aliceblue;
 }
-
 
 @media (max-width:800px) {
   .pie-pagina .grupo-1{
@@ -310,4 +328,16 @@ h5{
 
 .imagenOfertas{
   width: 100%;
+}
+
+.navbarShadow{
+  box-shadow: 2px 10px 43px 0px rgba(31,31,31,0.75);
+  -webkit-box-shadow: 2px 10px 43px 0px rgba(31,31,31,0.75);
+  -moz-box-shadow: 2px 10px 43px 0px rgba(31,31,31,0.75);
+}
+
+.footerShadow{
+  box-shadow: 2px -5px 43px 0px rgba(31,31,31,0.75);
+  -webkit-box-shadow: 2px -5px 43px 0px rgba(31,31,31,0.75);
+  -moz-box-shadow: 2px -5px 43px 0px rgba(31,31,31,0.75);
 }

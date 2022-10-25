@@ -96,13 +96,26 @@ const imprimirJuego = async () => {
                 <div class="container mt-5 fs-5 mb-5">${juego.synopsis}</div>
             </div>
             <div class="d-flex flex-row-reverse fixedBottom m-5">
-                <a href="./404.html"><button type="button" class="btn btn-darkk btn-lg">Comprar</button></a>
+                <a href="./404.html"><button type="button" class="btn btn-darkk btn-lg" id="comprarJuego">Comprar</button></a>
             </div>
         </div>
     `)
 }
 
 imprimirJuego()
+
+const imprimirComprar = async () => {
+    const juego = await getJuego();
+    const detalles = document.getElementById ("comprarJuego");
+
+    if (juego.price == "0"){
+    detalles.innerHTML = (`Descargar`)
+    }else{
+    detalles.innerHTML = (`Comprar`)
+    }
+}
+
+imprimirComprar()
 
 const imprimirPrecio = async () => {
     const juego = await getJuego();

@@ -217,3 +217,15 @@ h3{
     height: 300px
   }
 }
+
+.navbarShadow{
+  box-shadow: 2px 10px 43px 0px rgba(31,31,31,0.75);
+  -webkit-box-shadow: 2px 10px 43px 0px rgba(31,31,31,0.75);
+  -moz-box-shadow: 2px 10px 43px 0px rgba(31,31,31,0.75);
+}
+
+.footerShadow{
+  box-shadow: 2px -5px 43px 0px rgba(31,31,31,0.75);
+  -webkit-box-shadow: 2px -5px 43px 0px rgba(31,31,31,0.75);
+  -moz-box-shadow: 2px -5px 43px 0px rgba(31,31,31,0.75);
+}

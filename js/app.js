@@ -137,7 +137,8 @@ const getAccion = async () => {
 const getAccionPublicados = async () => {
   juegos = await getAccion()
   const accion = juegos.filter(juego => juego.published == true )
-  return accion
+  const accionRandom = accion.sort((a, b) => 0.5 - Math.random());
+  return accionRandom
 }
 
 const getCarreras = async () => {
@@ -149,7 +150,8 @@ const getCarreras = async () => {
 const getCarrerasPublicados = async () => {
   juegos = await getCarreras()
   const carreras = juegos.filter(juego => juego.published == true )
-  return carreras
+  const carrerasRandom = carreras.sort((a, b) => 0.5 - Math.random());
+  return carrerasRandom
 }
 
 const getTerror = async () => {
@@ -161,7 +163,9 @@ const getTerror = async () => {
 const getTerrorPublicados = async () => {
   juegos = await getTerror()
   const terror = juegos.filter(juego => juego.published == true )
-  return terror
+  const terrorRandom = terror.sort((a, b) => 0.5 - Math.random());
+  return terrorRandom
+
 }
 
 const getEstrategia = async () => {
@@ -173,7 +177,8 @@ const getEstrategia = async () => {
 const getEstrategiaPublicados = async () => {
   juegos = await getEstrategia()
   const estrategia = juegos.filter(juego => juego.published == true )
-  return estrategia
+  const estrategiaRandom = estrategia.sort((a, b) => 0.5 - Math.random());
+  return estrategiaRandom
 }
 
 const imprimirAccion = async () => {
@@ -360,7 +365,7 @@ setTimeout(function(){
       </div>
     </div>
   `)
-}, 15000);
+}, 30000);
 
 const cerrarModal = () =>{
   const modal = document.getElementById("modalOfertas")
