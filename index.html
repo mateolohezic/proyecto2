@@ -52,13 +52,36 @@
                     </div>
                     <div class="modal-footer bg-black text-light">
                       ¿No tienes una cuenta?
-                      <div data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
-                        <a class="registro" href="#exampleModalToggle2">Regístrate</a>
+                        <a class="registro" href="#exampleModalToggle2"  data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Regístrate</a>
+                      <div>
+                        ¿Olvidaste tu contraseña? <a class="registro" href="#recuperarModal"  data-bs-target="#recuperarModal" data-bs-toggle="modal">Restablecer</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="modal fade" id="recuperarModal" tabindex="-1" aria-labelledby="recuperarModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content bg-black ">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 text-white" id="recuperarModalLabel">Recuperar Contraseña</h1>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-white">
+                      <form>
+                        <div class="mb-3">
+                          <label for="usuarioRecuperar" class="form-label">Ingrese su Usuario</label>
+                          <input type="text" class="form-control" id="usuarioRecuperar">
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer text-white">
+                    </div>
+                  </div>
+                </div>
+              </div>              
               <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                   <div class="modal-content">
