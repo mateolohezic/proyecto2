@@ -344,12 +344,14 @@ const editarJuego = (id) =>{
         "Content-type": "application/json; charset=UTF-8"
     }
   })
+  reload()
 }
 
 const eliminarJuego = (id) =>{
   fetch(`http://localhost:3000/games/${id}`, {
     method: 'DELETE',
   });
+  reload()
 }
 
 const imprimirFavorito = async (id) =>{
@@ -393,6 +395,7 @@ const agregarFavorito = (id) =>{
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
+  reload()
 }
 
 const quitarFavorito = (id) =>{
@@ -407,6 +410,7 @@ const quitarFavorito = (id) =>{
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
+  reload()
 }
 
 const imprimirPublicado = async (id) =>{
@@ -434,6 +438,7 @@ const agregarPublicado = (id) =>{
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
+  reload()
 }
 
 const quitarPublicado = (id) =>{
@@ -448,7 +453,7 @@ const quitarPublicado = (id) =>{
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
-
+  reload()
 }
 
 const cerrarSesion = () =>{
