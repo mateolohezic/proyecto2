@@ -17,7 +17,7 @@
       "email": "mateolohezic@gmail.com",
       "password": "1234567",
       "role": "admin",
-      "confirm": "suspendido",
+      "confirm": "verificado",
       "id": 2
     },
     {
@@ -37,8 +37,18 @@
       "email": "mateolohezic@gmail.com",
       "password": "123456",
       "role": "usuario",
-      "confirm": "pendiente",
+      "confirm": "verificado",
       "id": 4
+    },
+    {
+      "name": "Alberto",
+      "surname": "Fernandez",
+      "user": "elpresi",
+      "email": "mateolohezic@gmail.com",
+      "password": "123123",
+      "role": "usuario",
+      "confirm": "pendiente",
+      "id": 5
     }
   ],
   "games": [

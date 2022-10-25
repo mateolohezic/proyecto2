@@ -57,7 +57,7 @@ const createUser = () => {
   const password = document.getElementById('password1').value
   const role = document.getElementById('roleId').value
   const confirm = "pendiente"
-  enviarMailRegistro(email)
+
   fetch('http://localhost:3000/users', {
     method: 'POST',
     body: JSON.stringify({
@@ -74,20 +74,6 @@ const createUser = () => {
     },
   })
   alert('Usuario creado con exito')
-}
-
-const enviarMailRegistro = (email) =>{
-  Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "coilinlohezic@gmail.com",
-    Password : "0D7454110DA7BA2754BB820D34225AD49204",
-    To : email,
-    From : "zonaplayRC@gmail.com",
-    Subject : "Bienvenido a Zona Play",
-    Body : "And this is the body"
-  }).then(
-    message => alert(message)
-  );
 }
 
 const cerrarSesion = () =>{
