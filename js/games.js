@@ -32,6 +32,7 @@ const cambiarPortada = async (imagen) => {
             'Content-type': 'application/json; charset=UTF-8',
         },
     })
+    location.reload();
 }
 
 const imprimirJuego = async () => {
