@@ -339,3 +339,26 @@ const imprimirDestacado = async () => {
 }
 
 imprimirDestacado()
+
+setTimeout(function(){
+  const modal = document.getElementById("modalOfertas")
+  modal.innerHTML = (`
+  <div class="modal fade show" id="publicidadModal" tabindex="-1" aria-labelledby="publicidadModalLabel" aria-modal="true" role="dialog" style="display: block;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" onclick="cerrarModal()"></button>
+          </div>
+          <div class="modal-body bg-dark">
+            <a href="./404.html"><img src="./img/oferts.jpg" class="imagenOfertas"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `)
+}, 15000);
+
+const cerrarModal = () =>{
+  const modal = document.getElementById("modalOfertas")
+  modal.innerHTML = (``)
+}
