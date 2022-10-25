@@ -6,6 +6,12 @@ const getUsers = async () => {
 
 getUsers()
 
+const getUser = async (id) => {
+  const resultado = await fetch(`http://localhost:3000/users/${id}`);
+  const resultados = await resultado.json();
+  return resultados;
+}
+
 const imprimirTabla = async () => {
   const users = await getUsers();
   const fila = document.getElementById ("tabla");
@@ -58,9 +64,10 @@ const imprimirVerificado = async (id) =>{
   }
 }
 
-const verificar = (id) =>{ 
+const verificar = async (id) =>{ 
   const confirm = "verificado"
-
+  const usuarios = await getUser(id)
+  enviarMailVerificado(usuarios.email)
   fetch(`http://localhost:3000/users/${id}`, {
     method: 'PATCH',
     body: JSON.stringify({
@@ -74,6 +81,8 @@ const verificar = (id) =>{
 
 const suspender = (id) =>{
   const confirm = "suspendido"
+  const usuarios = getUser(id)
+  enviarMailSuspendido(usuarios.email)
 
   fetch(`http://localhost:3000/users/${id}`, {
     method: 'PATCH',
@@ -132,3 +141,32 @@ const cerrarSesion = () =>{
   localStorage.setItem ("role", "nologin")
   window.location.href= "./index.html"
 }
+
+const enviarMailVerificado = (email) =>{
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "zonaplayRC@gmail.com",
+    Password : "7AE92C3B8B5BC3EDE1BF8E3E13515B97A275",
+    To : email,
+    From : "zonaplayRC@gmail.com",
+    Subject : "Verificación de cuenta",
+    Body : "¡Su cuenta ha sido verificada con exito! Ya puede iniciar sesión"
+  }).then(
+    message => alert(message)
+  );
+}
+
+const enviarMailSuspendido = (email) =>{
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "zonaplayRC@gmail.com",
+    Password : "7AE92C3B8B5BC3EDE1BF8E3E13515B97A275",
+    To : email,
+    From : "zonaplayRC@gmail.com",
+    Subject : "Suspension de cuenta",
+    Body : "Su cuenta ha sido suspendida temporalmente por infracción a los Términos y Condiciones de la empresa. Para más información contacte con soporte."
+  }).then(
+    message => alert(message)
+  );
+}
+
