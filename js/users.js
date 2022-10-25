@@ -145,8 +145,8 @@ const cerrarSesion = () =>{
 const enviarMailVerificado = (email) =>{
   Email.send({
     Host : "smtp.elasticemail.com",
-    Username : "zonaplayRC@gmail.com",
-    Password : "7AE92C3B8B5BC3EDE1BF8E3E13515B97A275",
+    Username : "coilinlohezic@gmail.com",
+    Password : "0D7454110DA7BA2754BB820D34225AD49204",
     To : email,
     From : "zonaplayRC@gmail.com",
     Subject : "Verificación de cuenta",
@@ -159,8 +159,8 @@ const enviarMailVerificado = (email) =>{
 const enviarMailSuspendido = (email) =>{
   Email.send({
     Host : "smtp.elasticemail.com",
-    Username : "zonaplayRC@gmail.com",
-    Password : "7AE92C3B8B5BC3EDE1BF8E3E13515B97A275",
+    Username : "coilinlohezic@gmail.com",
+    Password : "0D7454110DA7BA2754BB820D34225AD49204",
     To : email,
     From : "zonaplayRC@gmail.com",
     Subject : "Suspension de cuenta",

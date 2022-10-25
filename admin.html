@@ -36,8 +36,14 @@
         <div class="my-5 text-center fs-1">Administración de Juegos</div>
         <div class="container-fluid row text-center justify-content-center mt-5 mb-5 m-0 p-0">
           <div class="col-12">
-            <div class="text-end mb-4">
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#añadirJuego"><i class="bi bi-plus-circle-fill"></i> Añadir</button>
+            <div class="d-flex justify-content-between">
+              <div class="text-start ms-1 mb-5">
+                <label for="search" class="mb-2 ms-auto me-2"><h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-search"></i></h1></label>
+                <input type="search" class="p-2 buscadorBarraAdmin ms-auto w-75" id="search" value="" oninput="barraCoinciden()" placeholder= "Buscar...">
+              </div>
+              <div class="text-end mb-4">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#añadirJuego"><i class="bi bi-plus-circle-fill"></i> Añadir</button>
+              </div>
             </div>
             <section>
               <div class="modal fade text-start" id="añadirJuego" tabindex="-1" aria-labelledby="añadirJuegoLabel" aria-hidden="true">
@@ -55,16 +61,16 @@
                             <input type="text" class="form-control" id="title" value="" required>
                           </div>
                           <div class="mb-3 col">
-                            <label for="developer" class="form-label">Desarrolllador</label>
+                            <label for="developer" class="form-label">Desarrollador</label>
                             <input type="text" class="form-control" id="developer" value="" required>
                           </div>
                         </div>
                         <div class="row">
                           <div class="mb-3 col">
-                            <label class="form-label">Categoria</label>
+                            <label class="form-label">Categoría</label>
                             <select class="form-select" aria-label="Default select example" id="categorie" required>
-                              <option value="" selected>Seleccione una Categoria</option>
-                              <option value="Acción">Accion</option>
+                              <option value="" selected>Seleccione una Categoría</option>
+                              <option value="Acción">Acción</option>
                               <option value="Carreras">Carreras</option>
                               <option value="Estrategia">Estrategia</option>
                               <option value="Terror">Terror</option>
@@ -121,7 +127,7 @@
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                           <button type="button" class="btn btn-danger" onclick="crearJuego()" >Añadir</button>
                         </div>
                       </form>
@@ -134,10 +140,10 @@
               <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th>Codigo</th>
+                    <th>Código</th>
                     <th>Nombre</th>
-                    <th>Categoria</th>
-                    <th class="columnaDescripcion">Descripcion</th>
+                    <th>Categoría</th>
+                    <th class="columnaDescripcion">Descripción</th>
                     <th>Precio</th>
                     <th>Publicado</th>
                     <th>Opciones</th>

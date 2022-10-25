@@ -7,6 +7,139 @@ const getJuegos = async () => {
 
 getJuegos()
 
+const coinciden = async (valor) => {
+  juegos = await getJuegos()
+  const letras = valor
+  const juegosCoinciden = juegos.filter(juego => juego.title.includes(`${letras}`) || juego.categorie.includes(`${letras}`) || juego.date.includes(`${letras}`) || juego.price.includes(`${letras}`) || juego.developer.includes(`${letras}`) || juego.title.toLowerCase().includes(`${letras}`) || juego.categorie.toLowerCase().includes(`${letras}`) || juego.developer.toLowerCase().includes(`${letras}`))
+  return juegosCoinciden
+}
+
+const barraSearch = (juegosCoinciden) =>{
+  const juegos = juegosCoinciden
+  const fila = document.getElementById(`tabla`)
+  const filas = juegos.map(juego => (`
+  <tr>
+      <td>${juego.id}<img src="./img/404.png"width="0" height="0" onload= "imprimirFavorito(${juego.id})"></td>
+      <td>${juego.title}<img src="./img/404.png"width="0" height="0" onload= "imprimirPublicado(${juego.id})"></td>
+      <td>${juego.categorie}</td>
+      <td>${juego.synopsis}</td>
+      <td>$ ${juego.price}</td>
+      <td>
+        <div id="publicado${juego.id}">
+        </div>
+      </td>
+      <td>
+        <div class="d-flex justify-content-evenly" >                                    
+          <div id="estrellaFav${juego.id}">
+          </div>
+          <div>
+            <button tton type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#editarJuego${juego.id}"><i class="bi bi-pencil-fill"></i></button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-danger"  onclick="eliminarJuego(${juego.id})"><i class="bi bi-trash"></i></button>
+          </div>
+        </div>
+      </td>
+  </tr>
+  <div class="modal fade text-start" id="editarJuego${juego.id}" tabindex="-1" aria-labelledby="editarJuegoLabel${juego.id}" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="editarJuegoLabel${juego.id}">Editar un juego</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="mb-3 col">
+                <label for="etitle${juego.id}" class="form-label">Titulo</label>
+                <input type="text" class="form-control" id="etitle${juego.id}" value="${juego.title}" required>
+              </div>
+              <div class="mb-3 col">
+                <label for="edeveloper${juego.id}" class="form-label">Desarrolllador</label>
+                <input type="text" class="form-control" id="edeveloper${juego.id}" value="${juego.developer}" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col">
+                <label class="form-label">Categoria</label>
+                <select class="form-select" aria-label="Default select example" id="ecategorie${juego.id}" required>
+                  <option value="N/A" selected>Seleccione una Categoria</option>
+                  <option value="Acción">Accion</option>
+                  <option value="Carreras">Carreras</option>
+                  <option value="Estrategia">Estrategia</option>
+                  <option value="Terror">Terror</option>
+                </select>
+              </div>
+              <div class="mb-3 col">
+                <label for="edate${juego.id}" class="form-label">Fecha de Estreno</label>
+                <input type="number" class="form-control" id="edate${juego.id}" min="1900" max="2023" value="${juego.date}" required>
+              </div>
+            </div>                                       
+            <div class="row">
+              <div class="mb-3 col">
+                <label for="eprice${juego.id}" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="eprice${juego.id}" value="${juego.price}" required>
+              </div>
+              <div class="mb-3 col">
+                <label for="esynopsis${juego.id}" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" id="esynopsis${juego.id}" value="${juego.synopsis}" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col">
+                  <label for="eimage1${juego.id}" class="form-label">Portada</label>
+                  <input type="text" class="form-control" id="eimage1${juego.id}" value="${juego.image1}" required>
+              </div>
+              <div class="mb-3 col">
+                  <label for="eimage2${juego.id}" class="form-label">Imagen 2</label>
+                  <input type="text" class="form-control" id="eimage2${juego.id}" value="${juego.image2}" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col">
+                <label for="eimage3${juego.id}" class="form-label">Imagen 3</label>
+                <input type="text" class="form-control" id="eimage3${juego.id}" value="${juego.image3}" required>
+              </div>
+              <div class="mb-3 col">
+                <label for="eimage4${juego.id}" class="form-label">Imagen 4</label>
+                <input type="text" class="form-control" id="eimage4${juego.id}" value="${juego.image4}" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-6">
+                <label class="form-label">Puntaje</label>
+                <select class="form-select" aria-label="Default select example" id="erating${juego.id}" required>
+                  <option value="N/A" selected>Seleccione un puntaje</option>
+                  <option value="0">0/5</option>
+                  <option value="1">1/5</option>
+                  <option value="2">2/5</option>
+                  <option value="3">3/5</option>
+                  <option value="4">4/5</option>
+                  <option value="5">5/5</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" onclick="editarJuego(${juego.id})">Editar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+`)).join('')  
+fila.innerHTML = filas
+}
+
+const barraCoinciden = async () =>{
+  const barraBusqueda = document.getElementById (`search`)
+  const valor = barraBusqueda.value
+  const juegosCoincidentes = await coinciden (valor)
+  return barraSearch(juegosCoincidentes)
+}
+
 const imprimirTabla = async () => {
   const juegos = await getJuegos();
   const fila = document.getElementById ("tabla");

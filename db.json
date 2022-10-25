@@ -17,8 +17,28 @@
       "email": "mateolohezic@gmail.com",
       "password": "1234567",
       "role": "admin",
-      "confirm": "verificado",
+      "confirm": "suspendido",
       "id": 2
+    },
+    {
+      "name": "franco",
+      "surname": "ragout",
+      "user": "franquito",
+      "email": "francoragout1@gmail.com",
+      "password": "1234567",
+      "role": "usuario",
+      "confirm": "suspendido",
+      "id": 3
+    },
+    {
+      "name": "asdasd",
+      "surname": "dasdasd",
+      "user": "asdasd",
+      "email": "mateolohezic@gmail.com",
+      "password": "123456",
+      "role": "usuario",
+      "confirm": "pendiente",
+      "id": 4
     }
   ],
   "games": [

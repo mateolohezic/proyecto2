@@ -5,3 +5,7 @@
 .columnaDescripcion{
     width: 30%;
 }
+
+.buscadorBarraAdmin{
+    outline: none;
+}

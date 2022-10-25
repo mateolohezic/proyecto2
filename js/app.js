@@ -15,6 +15,24 @@
   })
 })()
 
+const restablecerContraseña2 = async () =>{
+  const userType = document.getElementById('userLoginNuevo').value
+  const results = await fetch('http://localhost:3000/users');
+  const users = await results.json()
+  const user = users.find(users => users.user === userType);
+  const password = document.getElementById('passwordNuevo').value
+
+  fetch(`http://localhost:3000/users/${user.id}`, {
+    method: 'PATCH',
+    body: JSON.stringify({
+      password,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+}
+
 const loginUser = async () => {
   const userType = document.getElementById('userLogin').value
   const passwordType = document.getElementById('passwordLogin').value
@@ -61,8 +79,8 @@ const createUser = () => {
 const enviarMailRegistro = (email) =>{
   Email.send({
     Host : "smtp.elasticemail.com",
-    Username : "zonaplayRC@gmail.com",
-    Password : "7AE92C3B8B5BC3EDE1BF8E3E13515B97A275",
+    Username : "coilinlohezic@gmail.com",
+    Password : "0D7454110DA7BA2754BB820D34225AD49204",
     To : email,
     From : "zonaplayRC@gmail.com",
     Subject : "Bienvenido a Zona Play",
