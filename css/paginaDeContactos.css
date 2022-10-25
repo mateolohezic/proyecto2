@@ -1,141 +1,139 @@
 body{
-    background-color: #2B2E4A;
-    color: white;
+  background-color: #2B2E4A;
+  color: white;
     
 }
 
 .inputNombre{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .inputEmail{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .areaDeConsulta{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .botonEnviar{
-    color: white;
-    background-color: #E84545;
-    border: none;
-    border-radius: 5px;
-    height: 35px;
+  color: white;
+  background-color: #E84545;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
 }
 
 @media (max-width: 700px) { 
-    
-    .sectionContacto{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+  .sectionContacto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .formularioContacto{
-        margin-left: 30px;
+  .formularioContacto{
+    margin-left: 30px;
 
-    }
+  }
 
-    .imagenContacto{
-        height: 260px;
-        width: 75%;
-        margin-left: 30px;
-        
-    }
+  .imagenContacto{
+    height: 260px;
+    width: 75%;
+    margin-left: 30px;
+  }
 
-    .inputNombre{
-        width: 90%;
-        margin-bottom: 10px;
-    }
-        
-    .inputEmail{
-        width: 90%;
-        margin-bottom: 10px;
-    }
+  .inputNombre{
+    width: 90%;
+    margin-bottom: 10px;
+  }
+      
+  .inputEmail{
+    width: 90%;
+    margin-bottom: 10px;
+  }
 
-    .areaDeConsulta{
-        width: 90%;
-        margin-bottom: 10px;
-    }
+  .areaDeConsulta{
+    width: 90%;
+    margin-bottom: 10px;
+  }
 
-    .botonEnviar{
-        margin-top: 5px;
-        
-    }
+  .botonEnviar{
+    margin-top: 5px;
+  }
 }
 
 @media (min-width: 701px) and (max-width: 1024px) {
+  .imagenContacto{
+    width: 40%;
+    margin: 20px;
+  }
 
-    .imagenContacto{
-        width: 40%;
-        margin: 20px;
+  .formularioContacto{
+    width: 40%;
+    margin: 20px;
+  }
 
-    }
+  .botonEnviar{
+    margin-top: 15px;
+  }
 
-    .formularioContacto{
-        width: 40%;
-        margin: 20px;
-    }
+  .inputEmail{
+    margin-top: 10px;
+  }
 
-    .botonEnviar{
-        margin-top: 15px;
-    }
+  .areaDeConsulta{
+    margin-top: 10px;
+  }
 
-    .inputEmail{
-        margin-top: 10px;
-    }
-
-    .areaDeConsulta{
-        margin-top: 10px;
-    }
-
-    .sectionContacto{
-        display: flex;
-        justify-content: center;
-    }
-
+  .sectionContacto{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media (min-width:1025px) {
-    .formularioContacto{
-        margin-top: 40px;
-        
-    }
+  .formularioContacto{
+    margin-top: 40px; 
+  }
 
-    .sectionContacto{
-        display: flex;
-        justify-content: space-evenly;
-    }
+  .sectionContacto{
+    display: flex;
+    justify-content: space-evenly;
+  }
 
-    .inputEmail{
-        margin-top: 20px;
-    }
+  .inputEmail{
+    margin-top: 20px;
+  }
 
-    .areaDeConsulta{
-        margin-top: 20px;
-    }
+  .areaDeConsulta{
+    margin-top: 20px;
+  }
 
-    .botonEnviar{
-        padding: 7px;
-        margin-top: 20px;
-        background-color: #903749;
-        color: antiquewhite
-    }
-    .botonEnviar:hover{
-        background-color: #E84545;
-    }
+  .botonEnviar{
+    padding: 7px;
+    margin-top: 20px;
+    background-color: #903749;
+    color: antiquewhite
+  }
+
+  .botonEnviar:hover{
+    background-color: #E84545;
+  }
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 .error{
   display: none;
 }
+
 .error-active{
   display: block;
 }
+
 .navbar{
   width: 100%;
   background-color:#903749;
@@ -143,71 +141,83 @@ body{
   align-items: center;
   justify-content: center;
 }
+
 .navbar .boton{
   background-color: #2B2E4A;
   color: antiquewhite;
   text-align: center;
   display: block;
-  font-family: 'Open Sans', sans-serif;
   transition: all 300ms ease;
 }
+
 .navbar .boton:hover{
   background-color: #E84545;
 }
+
 .registro{
   color: #E84545;
   text-decoration: none;
 }
+
 .registro:hover{
   color: #903749;
 }
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
 }
+
 .pie-pagina{
-width: 100%;
-background-color: #903749;
+  width: 100%;
+  background-color: #903749;
 }
+
 .pie-pagina .grupo-1{
-width: 100%;
-max-width: 2000px;
-margin: auto;
-display: grid;
-grid-template-columns: repeat(3, .5fr);
-grid-gap: 50px;
-padding: 45px 0px;
+  width: 100%;
+  max-width: 2000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, .5fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
 }
+
 .pie-pagina .grupo-1 .box figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
 }
+
 .pie-pagina .grupo-1 .box .logo{
   display: inline-block;
   transition: all 1s ease-out;
 }
+
 .pie-pagina .grupo-1 .box .logo:hover {
   background-color: #E84545;
   border-radius: 100%;
 }
+
 .pie-pagina .grupo-1 .box figure img{
   width: 175px;
 }
+
 .pie-pagina .grupo-1 .box h2{
   color: rgb(212, 216, 220);
   margin-bottom: 25px;
   font-size: 20px;
 }
+
 .pie-pagina .grupo-1 .box-1 h2{
   color: rgb(212, 216, 220);
   margin-bottom: 25px;
   font-size: 20px;
 }
+
 .pie-pagina .grupo-1 .box-1 a{
   display: block;
   text-decoration: none;
@@ -216,9 +226,11 @@ padding: 45px 0px;
   margin-bottom: 10px;
   transition: all 300ms ease;
 }
+
 .pie-pagina .grupo-1 .box-1 a:hover{
   color: #E84545;
 }
+
 .pie-pagina .grupo-1 .redes a{
   display: inline-block;
   text-decoration: none;
@@ -232,27 +244,35 @@ padding: 45px 0px;
   text-align: center;
   transition: all 300ms ease;
 }
+
 .pie-pagina .grupo-1 .redes a:hover{
   color: #E84545;
 }
+
 .pie-pagina .grupo-2{
   background-color: #53354A;
   padding: 15px 10px;
   text-align: center;
   color: rgb(172, 173, 173);
 }
+
 .pie-pagina .grupo-2 small{
   font-size: 15px;
 }
-@media screen and (max-width:800px) {
+
+@media (max-width:800px) {
   .pie-pagina .grupo-1{
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 35px 0px;
-    }
+  }
 }
 
 .logonavbar{
   width: 90px;
+}
+
+.fuente{
+  font-family: 'Ubuntu', sans-serif;
 }

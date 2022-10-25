@@ -1,156 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/admin.css">
-        <link rel="stylesheet" href="./css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">      
-        <title>Administración</title>
-    </head>
-    <script src="./js/admin.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <body class="fuente">
-      <section>
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand ms-1 logo" href="./index.html"><img src="img/Logo ZONA PLAY ig.png" alt="Logo ZonaPlay" width="125px"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <div class="navbar-nav ms-auto">
-                <a href="./index.html" class="text-decoration-none text-light"><button type="button" class="btn mt-2 ms-1 me-1 boton">Inicio <i class="bi bi-house-door-fill"></i></button></a>        
-                <button type="button" class="btn mt-2 ms-1 me-1 boton" onclick="cerrarSesion()">Cerrar Sesión <i class="bi bi-door-open-fill"></i></button>
-              </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">      
+    <link rel="icon" href="./img/Logo ZONA PLAY ig.png" type="image/x-icon">
+    <title>Administración - Zona Play</title>
+  </head>
+  <body class="fuente">
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-1 logo" href="./index.html"><img src="img/Logo ZONA PLAY ig.png" alt="Logo ZonaPlay" width="125px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-auto">
+              <a href="./index.html" class="text-decoration-none text-light"><button type="button" class="btn mt-2 ms-1 me-1 boton">Inicio <i class="bi bi-house-door-fill"></i></button></a>        
+              <button type="button" class="btn mt-2 ms-1 me-1 boton" onclick="cerrarSesion()">Cerrar Sesión <i class="bi bi-door-open-fill"></i></button>
             </div>
           </div>
-        </nav>
-      </section>
-      <main>
-        <section>
-          <div class="my-5 text-center fs-1">Administración de Juegos</div>
-          <div class="container-fluid row text-center justify-content-center mt-5 mb-5 m-0 p-0">
-            <div class="col-12">
-              <div class="text-end mb-4">
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#añadirJuego"><i class="bi bi-plus-circle-fill"></i> Añadir</button>
-              </div>
-              <section>
-                <div class="modal fade text-start" id="añadirJuego" tabindex="-1" aria-labelledby="añadirJuegoLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="añadirJuegoLabel">Añadir un juego</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-                          <div class="row">
-                            <div class="mb-3 col">
-                              <label for="title" class="form-label">Titulo</label>
-                              <input type="text" class="form-control" id="title" value="" required>
-                            </div>
-                            <div class="mb-3 col">
-                              <label for="developer" class="form-label">Desarrolllador</label>
-                              <input type="text" class="form-control" id="developer" value="" required>
-                            </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="my-5 text-center fs-1">Administración de Juegos</div>
+        <div class="container-fluid row text-center justify-content-center mt-5 mb-5 m-0 p-0">
+          <div class="col-12">
+            <div class="text-end mb-4">
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#añadirJuego"><i class="bi bi-plus-circle-fill"></i> Añadir</button>
+            </div>
+            <section>
+              <div class="modal fade text-start" id="añadirJuego" tabindex="-1" aria-labelledby="añadirJuegoLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="añadirJuegoLabel">Añadir un juego</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="row">
+                          <div class="mb-3 col">
+                            <label for="title" class="form-label">Titulo</label>
+                            <input type="text" class="form-control" id="title" value="" required>
                           </div>
-                          <div class="row">
-                            <div class="mb-3 col">
-                              <label class="form-label">Categoria</label>
-                              <select class="form-select" aria-label="Default select example" id="categorie" required>
-                                <option value="" selected>Seleccione una Categoria</option>
-                                <option value="Acción">Accion</option>
-                                <option value="Carreras">Carreras</option>
-                                <option value="Estrategia">Estrategia</option>
-                                <option value="Terror">Terror</option>
-                              </select>
-                            </div>
-                            <div class="mb-3 col">
-                              <label for="date" class="form-label">Fecha de Estreno</label>
-                              <input type="number" class="form-control" id="date" min="1900" max="2023" value="" required>
-                            </div>
-                          </div>                                       
-                          <div class="row">
-                            <div class="mb-3 col">
-                              <label for="price" class="form-label">Precio</label>
-                              <input type="number" class="form-control" id="price" value="" aria-describedby="priceHelp" required>
-                              <div id="priceHelp" class="form-text">Si es gratis, inserte 0.</div>
-                            </div>
-                            <div class="mb-3 col">
-                              <label for="synopsis" class="form-label">Descripcion</label>
-                              <input type="text" class="form-control" id="synopsis" value="" required>
-                            </div>
+                          <div class="mb-3 col">
+                            <label for="developer" class="form-label">Desarrolllador</label>
+                            <input type="text" class="form-control" id="developer" value="" required>
                           </div>
-                          <div class="row">
-                            <div class="mb-3 col">
-                                <label for="image1" class="form-label">Portada</label>
-                                <input type="text" class="form-control" id="image1" value="" required>
-                            </div>
-                            <div class="mb-3 col">
-                                <label for="image2" class="form-label">Imagen 2</label>
-                                <input type="text" class="form-control" id="image2" value="" required>
-                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="mb-3 col">
+                            <label class="form-label">Categoria</label>
+                            <select class="form-select" aria-label="Default select example" id="categorie" required>
+                              <option value="" selected>Seleccione una Categoria</option>
+                              <option value="Acción">Accion</option>
+                              <option value="Carreras">Carreras</option>
+                              <option value="Estrategia">Estrategia</option>
+                              <option value="Terror">Terror</option>
+                            </select>
                           </div>
-                          <div class="row">
-                            <div class="mb-3 col">
-                              <label for="image3" class="form-label">Imagen 3</label>
-                              <input type="text" class="form-control" id="image3" value="" required>
-                            </div>
-                            <div class="mb-3 col">
-                              <label for="image4" class="form-label">Imagen 4</label>
-                              <input type="text" class="form-control" id="image4" value="" required>
-                            </div>
+                          <div class="mb-3 col">
+                            <label for="date" class="form-label">Fecha de Estreno</label>
+                            <input type="number" class="form-control" id="date" min="1900" max="2023" value="" required>
                           </div>
-                          <div class="row">
-                            <div class="mb-3 col-6">
-                              <label class="form-label">Puntaje</label>
-                              <select class="form-select" aria-label="Default select example" id="rating" required>
-                                <option value="" selected>Seleccione un puntaje</option>
-                                <option value="0">0/5</option>
-                                <option value="1">1/5</option>
-                                <option value="2">2/5</option>
-                                <option value="3">3/5</option>
-                                <option value="4">4/5</option>
-                                <option value="5">5/5</option>
-                              </select>
-                            </div>
+                        </div>                                       
+                        <div class="row">
+                          <div class="mb-3 col">
+                            <label for="price" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="price" value="" aria-describedby="priceHelp" required>
+                            <div id="priceHelp" class="form-text">Si es gratis, inserte 0.</div>
                           </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-danger" onclick="crearJuego()" >Añadir</button>
+                          <div class="mb-3 col">
+                            <label for="synopsis" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control" id="synopsis" value="" required>
                           </div>
-                        </form>
-                      </div>
+                        </div>
+                        <div class="row">
+                          <div class="mb-3 col">
+                            <label for="image1" class="form-label">Portada</label>
+                            <input type="text" class="form-control" id="image1" value="" required>
+                          </div>
+                          <div class="mb-3 col">
+                            <label for="image2" class="form-label">Imagen 2</label>
+                            <input type="text" class="form-control" id="image2" value="" required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="mb-3 col">
+                            <label for="image3" class="form-label">Imagen 3</label>
+                            <input type="text" class="form-control" id="image3" value="" required>
+                          </div>
+                          <div class="mb-3 col">
+                            <label for="image4" class="form-label">Imagen 4</label>
+                            <input type="text" class="form-control" id="image4" value="" required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="mb-3 col-6">
+                            <label class="form-label">Puntaje</label>
+                            <select class="form-select" aria-label="Default select example" id="rating" required>
+                              <option value="" selected>Seleccione un puntaje</option>
+                              <option value="0">0/5</option>
+                              <option value="1">1/5</option>
+                              <option value="2">2/5</option>
+                              <option value="3">3/5</option>
+                              <option value="4">4/5</option>
+                              <option value="5">5/5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-danger" onclick="crearJuego()" >Añadir</button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
-              </section>
-              <div class="table-responsive">
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th>Codigo</th>
-                      <th>Nombre</th>
-                      <th>Categoria</th>
-                      <th class="columnaDescripcion">Descripcion</th>
-                      <th>Precio</th>
-                      <th>Publicado</th>
-                      <th>Opciones</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tabla">
-                  </tbody>
-                </table>
               </div>
+            </section>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                    <th class="columnaDescripcion">Descripcion</th>
+                    <th>Precio</th>
+                    <th>Publicado</th>
+                    <th>Opciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla">
+                </tbody>
+              </table>
             </div>
           </div>
-        </section>
+        </div>
       </section>
       <footer class="pie-pagina">
         <div class="grupo-1">
@@ -163,10 +161,10 @@
           </div>
           <div class="box-1">
             <h2>SOBRE NOSOTROS</h2>
-            <a href="sobreNosotros.html">Quienes somos</a>
-            <a href="paginaDeContactos.html">Contacto</a>
-            <a href="#">Política de privacidad</a>
-            <a href="#">Reembolso</a>
+            <a href="./sobreNosotros.html">Quienes somos</a>
+            <a href="./paginaDeContactos.html">Contacto</a>
+            <a href="./404.html">Política de privacidad</a>
+            <a href="./404.html">Reembolso</a>
           </div>
           <div class="box">
             <h2>SÍGUENOS</h2>
@@ -182,9 +180,9 @@
           <small>&copy; 2022 <b>ZonaPlay</b> - Todos los derechos reservados.</small>
         </div>
       </footer>
-      </main>    
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-      <script src="https://kit.fontawesome.com/e04dfe5a58.js" crossorigin="anonymous"></script>
-    </body>
+    </main>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e04dfe5a58.js" crossorigin="anonymous"></script>
+    <script src="./js/admin.js"></script>
+  </body>
 </html>
-

@@ -24,84 +24,81 @@ const cambiarPortada = async (imagen) => {
     }
 
     fetch(`http://localhost:3000/games/${juego.id}`, {
-      method: 'PATCH',
-      body: JSON.stringify({
-        portada,
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    }
-  )
-    
+        method: 'PATCH',
+        body: JSON.stringify({
+            portada,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
 }
 
-  const imprimirJuego = async () => {
+const imprimirJuego = async () => {
     const juego = await getJuego();
     const detalles = document.getElementById ("paginaJuego");
+    const titulo = document.getElementById ("tituloPagina");
 
+    titulo.innerHTML = (`${juego.title} - Zona Play`)
     detalles.innerHTML = (`
-    
-    <div class="container col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-md-12 cajagrandeizq text-center">
-        <div class="text-start volverinicio mt-3 ms-4">
-            <a href="./index.html" class="text-decoration-none inicio"><i class="bi bi-arrow-left-short"></i>Inicio</a>
-        </div>
-        <div class="container ">
-            <div id="carouselFotosJuego" class="carousel slide carruseljuego mx-auto fixedtop mt-3" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active ">
-                        <img src="${juego.image1}" class="d-block w-100 imagencarrousel" alt="Imagen 1">
+        <div class="container col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-md-12 cajagrandeizq text-center">
+            <div class="text-start volverinicio mt-3 ms-4">
+                <a href="./index.html" class="text-decoration-none inicio"><i class="bi bi-arrow-left-short"></i>Inicio</a>
+            </div>
+            <div class="container ">
+                <div id="carouselFotosJuego" class="carousel slide carruseljuego mx-auto fixedtop mt-3" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <img src="${juego.image1}" class="d-block w-100 imagencarrousel" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="${juego.image2}" class="d-block w-100 imagencarrousel" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="${juego.image3}" class="d-block w-100 imagencarrousel" alt="Imagen 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="${juego.image4}" class="d-block w-100 imagencarrousel" alt="Imagen 4">
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="${juego.image2}" class="d-block w-100 imagencarrousel" alt="Imagen 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="${juego.image3}" class="d-block w-100 imagencarrousel" alt="Imagen 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="${juego.image4}" class="d-block w-100 imagencarrousel" alt="Imagen 4">
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotosJuego" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselFotosJuego" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotosJuego" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselFotosJuego" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+            </div>
+            <div class="galeriaseleccionar">
+                <div class="container col-8">
+                    <img src="${juego.portada}" alt="Portada" class="mt-3 mb-3 img-fluid imagengrande">
+                </div>
+                <div class="container col-10">    
+                    <img src="${juego.image1}" alt="Imagen 1" class="imagenchica" onclick="cambiarPortada(1)">
+                    <img src="${juego.image2}" alt="Imagen 2" class="imagenchica" onclick="cambiarPortada(2)">
+                </div>
+                <div class="container col-10 mt-2"> 
+                    <img src="${juego.image3}" alt="Imagen 3" class="imagenchica" onclick="cambiarPortada(3)">
+                    <img src="${juego.image4}" alt="Imagen 4" class="imagenchica" onclick="cambiarPortada(4)">
+                </div>
             </div>
         </div>
-        <div class="galeriaseleccionar">
-            <div class="container col-8">
-                <img src="${juego.portada}" alt="Portada" class="mt-3 mb-3 img-fluid imagengrande">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-md-12 cajagrandeder">
+            <div class="column text-start ms-4 me-2">
+                <div class="container mt-5 fs-1">${juego.title}</div>
+                <div class="container fs-3 text-white" id="precioJuego"></div>
+                <div class="container fs-6 text-white text-opacity-75">${juego.developer}</div>
+                <div class="container fs-6 text-white text-opacity-75">Etiquetas: ${juego.categorie}</div>
+                <div class="container fs-6 text-white text-opacity-75">Fecha de Estreno: ${juego.date}</div>
+                <div class="container fs-6 text-white text-opacity-75" id="estrellasRating"></div>
+                <div class="container mt-5 fs-5 mb-5">${juego.synopsis}</div>
             </div>
-            <div class="container col-10">    
-                <img src="${juego.image1}" alt="Imagen 1" class="imagenchica" onclick="cambiarPortada(1)">
-                <img src="${juego.image2}" alt="Imagen 2" class="imagenchica" onclick="cambiarPortada(2)">
-            </div>
-            <div class="container col-10 mt-2"> 
-                <img src="${juego.image3}" alt="Imagen 3" class="imagenchica" onclick="cambiarPortada(3)">
-                <img src="${juego.image4}" alt="Imagen 4" class="imagenchica" onclick="cambiarPortada(4)">
+            <div class="d-flex flex-row-reverse fixedBottom m-5">
+                <a href="./404.html"><button type="button" class="btn btn-darkk btn-lg">Comprar</button></a>
             </div>
         </div>
-    </div>
-    <div class="col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-md-12 cajagrandeder">
-        <div class="column text-start ms-4 me-2">
-            <div class="container mt-5 fs-1">${juego.title}</div>
-            <div class="container fs-3 text-white" id="precioJuego"></div>
-            <div class="container fs-6 text-white text-opacity-75">${juego.developer}</div>
-            <div class="container fs-6 text-white text-opacity-75">Etiquetas: ${juego.categorie}</div>
-            <div class="container fs-6 text-white text-opacity-75">Fecha de Estreno: ${juego.date}</div>
-            <div class="container fs-6 text-white text-opacity-75" id="estrellasRating"></div>
-            <div class="container mt-5 fs-5 mb-5">${juego.synopsis}</div>
-        </div>
-        <div class="d-flex flex-row-reverse fixedBottom m-5">
-            <a href="./404.html"><button type="button" class="btn btn-darkk btn-lg">Comprar</button></a>
-
-        </div>
-    </div>
-    
     `)
 }
 

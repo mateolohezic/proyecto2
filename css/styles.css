@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 .bodyy{
   background-color: #2B2E4A;
   font-family: 'Ubuntu', sans-serif;
@@ -261,7 +259,7 @@ padding: 45px 0px;
 
   .tituloDestacado{
     margin-top: 6rem;
-    }
+  }
 
   .carouselDestacado img{
     height: 50vh;
@@ -304,4 +302,8 @@ padding: 45px 0px;
     height: 20vh;
     border-bottom: 5px solid #903749 ;
   }
+}
+
+h5{
+  text-shadow: 4px 4px 5px #000000;
 }

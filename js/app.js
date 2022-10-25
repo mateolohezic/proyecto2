@@ -161,93 +161,6 @@ const getEstrategiaPublicados = async () => {
 const imprimirAccion = async () => {
   const juegos = await getAccionPublicados();
   const carousel = document.getElementById ("imprimirAccion");
-
-  const juegosDelCarousel = juegos.map(juego => (`
-  <div class="carousel-item">
-    <div class="row justify-content-center">
-      <div class="col-6">
-        <div class="card border-0">
-          <img src="${juego.image1}" class="card-img-top imagencarousel border-bottom border-5 border-dark border-primary">
-          <div class="card-body ">
-            <h5 class="card-title fuente tituloCard mt-3 mb-4 tamañoFuente">${juego.title}</h5>
-            <p class="card-text fuente descripcionCard">${juego.synopsis}</p>
-            <div class="d-flex flex-row-reverse fuente">
-              <button type="button" class="btn btn-danger" onclick="setX(${juego.id})">Ver más</button>  
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  `)).join('')
-
-  carousel.innerHTML = juegosDelCarousel
-}
-
-imprimirAccion()
-
-const imprimirTerror = async () => {
-  const juegos = await getTerrorPublicados();
-  const carousel = document.getElementById ("imprimirTerror");
-
-  const juegosDelCarousel = juegos.map(juego => (`
-  <div class="carousel-item">
-    <div class="row justify-content-center">
-      <div class="col-6">
-        <div class="card border-0">
-          <img src="${juego.image1}" class="card-img-top imagencarousel border-bottom border-5 border-dark border-primary">
-          <div class="card-body ">
-            <h5 class="card-title fuente tituloCard mt-3 mb-4 tamañoFuente">${juego.title}</h5>
-            <p class="card-text fuente descripcionCard">${juego.synopsis}</p>
-            <div class="d-flex flex-row-reverse fuente">
-              <button type="button" class="btn btn-danger" onclick="setX(${juego.id})">Ver más</button>  
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  `)).join('')
-
-  carousel.innerHTML = juegosDelCarousel
-}
-
-imprimirTerror()
-
-const imprimirCarreras = async () => {
-  const juegos = await getCarrerasPublicados();
-  const carousel = document.getElementById ("imprimirCarreras");
-
-  const juegosDelCarousel = juegos.map(juego => (`
-  <div class="carousel-item">
-    <div class="row justify-content-center">
-      <div class="col-6">
-        <div class="card border-0">
-          <img src="${juego.image1}" class="card-img-top imagencarousel border-bottom border-5 border-dark border-primary">
-          <div class="card-body ">
-            <h5 class="card-title fuente tituloCard mt-3 mb-4 tamañoFuente">${juego.title}</h5>
-            <p class="card-text fuente descripcionCard">${juego.synopsis}</p>
-            <div class="d-flex flex-row-reverse fuente">
-              <button type="button" class="btn btn-danger" onclick="setX(${juego.id})">Ver más</button>  
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  `)).join('')
-
-  carousel.innerHTML = juegosDelCarousel
-}
-
-imprimirCarreras()
-
-const imprimirEstrategia = async () => {
-  const juegos = await getEstrategiaPublicados();
-  const carousel = document.getElementById ("imprimirEstrategia");
-
   const juegosDelCarousel = juegos.map(juego => (`
     <div class="carousel-item">
       <div class="row justify-content-center">
@@ -265,7 +178,87 @@ const imprimirEstrategia = async () => {
         </div>
       </div>
     </div>
-  
+  `)).join('')
+
+  carousel.innerHTML = juegosDelCarousel
+}
+
+imprimirAccion()
+
+const imprimirTerror = async () => {
+  const juegos = await getTerrorPublicados();
+  const carousel = document.getElementById ("imprimirTerror");
+  const juegosDelCarousel = juegos.map(juego => (`
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="card border-0">
+            <img src="${juego.image1}" class="card-img-top imagencarousel border-bottom border-5 border-dark border-primary">
+            <div class="card-body ">
+              <h5 class="card-title fuente tituloCard mt-3 mb-4 tamañoFuente">${juego.title}</h5>
+              <p class="card-text fuente descripcionCard">${juego.synopsis}</p>
+              <div class="d-flex flex-row-reverse fuente">
+                <button type="button" class="btn btn-danger" onclick="setX(${juego.id})">Ver más</button>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `)).join('')
+
+  carousel.innerHTML = juegosDelCarousel
+}
+
+imprimirTerror()
+
+const imprimirCarreras = async () => {
+  const juegos = await getCarrerasPublicados();
+  const carousel = document.getElementById ("imprimirCarreras");
+  const juegosDelCarousel = juegos.map(juego => (`
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="card border-0">
+            <img src="${juego.image1}" class="card-img-top imagencarousel border-bottom border-5 border-dark border-primary">
+            <div class="card-body ">
+              <h5 class="card-title fuente tituloCard mt-3 mb-4 tamañoFuente">${juego.title}</h5>
+              <p class="card-text fuente descripcionCard">${juego.synopsis}</p>
+              <div class="d-flex flex-row-reverse fuente">
+                <button type="button" class="btn btn-danger" onclick="setX(${juego.id})">Ver más</button>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `)).join('')
+
+  carousel.innerHTML = juegosDelCarousel
+}
+
+imprimirCarreras()
+
+const imprimirEstrategia = async () => {
+  const juegos = await getEstrategiaPublicados();
+  const carousel = document.getElementById ("imprimirEstrategia");
+  const juegosDelCarousel = juegos.map(juego => (`
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="card border-0">
+            <img src="${juego.image1}" class="card-img-top imagencarousel border-bottom border-5 border-dark border-primary">
+            <div class="card-body ">
+              <h5 class="card-title fuente tituloCard mt-3 mb-4 tamañoFuente">${juego.title}</h5>
+              <p class="card-text fuente descripcionCard">${juego.synopsis}</p>
+              <div class="d-flex flex-row-reverse fuente">
+                <button type="button" class="btn btn-danger" onclick="setX(${juego.id})">Ver más</button>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   `)).join('')
 
   carousel.innerHTML = juegosDelCarousel
@@ -286,22 +279,19 @@ const coinciden = async (valor) => {
 }
 
 const barraSearch = (juegosCoinciden) =>{
-  
   const juegos = juegosCoinciden
   const cards = document.getElementById(`searchCards`)
   const juegosCards = juegos.map(juego => (`
-
-  <div class="searchCard" onclick="setX(${juego.id})">
-    <div class="searchCardBody mt-4 p-3">
-      <div class="text-center">
-        <div class="text-white fs-5">${juego.title}</div>
+    <div class="searchCard" onclick="setX(${juego.id})">
+      <div class="searchCardBody mt-4 p-3">
+        <div class="text-center">
+          <div class="text-white fs-5">${juego.title}</div>
+        </div>
       </div>
     </div>
-  </div>
   `)).join('')
 
   cards.innerHTML = juegosCards
-
 }
 
 const barraCoinciden = async () =>{
@@ -319,19 +309,18 @@ const imprimirDestacado = async () => {
   const imagen3 = document.getElementById ("imagen3");
 
   imagen1.innerHTML = (`
-  <img src="${juego.image1}" class="d-block w-100" onclick="setX(${juego.id})">
-  <div class="carousel-caption d-none d-md-block">
-    <h5 class="text-light fs-5 text-center mt-5 badge bg-secondary bg-opacity-50 text-wrap w-100">${juego.title}</h5>
-  </div>
-  
+    <img src="${juego.image1}" class="d-block w-100" onclick="setX(${juego.id})">
+    <div class="carousel-caption d-none d-md-block">
+      <h5 class="text-light fs-5 text-center mt-5 badge bg-secondary bg-opacity-50 text-wrap w-100">${juego.title}</h5>
+    </div>
   `)
 
   imagen2.innerHTML = (`
-  <img src="${juego.image2}" class="d-block w-100" onclick="setX(${juego.id})">
+    <img src="${juego.image2}" class="d-block w-100" onclick="setX(${juego.id})">
   `)
 
   imagen3.innerHTML = (`
-  <img src="${juego.image3}" class="d-block w-100" onclick="setX(${juego.id})">
+    <img src="${juego.image3}" class="d-block w-100" onclick="setX(${juego.id})">
   `)
 }
 

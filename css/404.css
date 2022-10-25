@@ -1,8 +1,10 @@
 body{
   margin: 0%;
   padding: 0%;
-background-color: #2B2E4A ;
+  background-color: #2B2E4A ;
+  font-family: 'Ubuntu', sans-serif;
 }
+
 .conten{
   position: fixed;
   top: 4em;
@@ -10,17 +12,20 @@ background-color: #2B2E4A ;
   text-align: center;
   align-items: center;
 }
+
 .conten .conten-img{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 img{
   width: 300px;
   display: block;
   animation: animates 3s linear infinite;
 }
+
 .conten .conten-number{
   position: absolute;
   font-size: 5.5rem;
@@ -30,11 +35,13 @@ img{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   animation: animatestext 3s linear infinite;
 }
+
 .conten .conten-error{
   color: #ffff;
   width: 50%;
   margin: 2em auto;
 }
+
 .conten .conten-button{
   background-color: #903749;
   color: #fff;
@@ -45,21 +52,26 @@ img{
   text-decoration: none;
   transition: all 300ms ease;
 }
+
 .conten .conten-button:hover{
   background-color:  #E84545;
 }
+
 @keyframes animates{
   0%{
     transform: translateX(5%);
   }
+
   100%{
     transform: translateX(-5%);
   }
 }
+
 @keyframes animatestext{
   0%{
     transform: rotate(5deg);
   }
+  
   100%{
     transform: rotate(-5deg);
   }

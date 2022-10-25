@@ -9,6 +9,7 @@
     -moz-box-shadow: 18px 2px 92px -18px rgba(0,0,0,0.75);
     z-index: 3;
 }
+
 @media (min-width: 1130px) {
     .imagengrande {
         height: 40vh;
@@ -61,8 +62,9 @@
 .imagencarrousel{
     height: 40vh;
 }
+
 @media (max-width: 770px){
-    .volverinicio {
+    .volverinicio{
         font-size: 20px;
     }
     .cajagrandeder{
@@ -74,15 +76,19 @@
     .carruseljuego{
         visibility: visible;
     }
+
     .galeriaseleccionar{
         visibility: hidden;
     }
+
     .cajagrandeizq{
         height: 60vh;
     }
+
     .cajagrandeder{
         height: 65%;
     }
+
     .h100{
         height: 100%;
     }
@@ -92,9 +98,11 @@
     .carruseljuego{
         visibility: hidden;
     }
+
     .galeriaseleccionar{
         visibility: visible;
     }
+
     .fixedtop {
         position: fixed;
         top: 0;
@@ -102,6 +110,7 @@
         left: 0;
         z-index: 1030;
     }
+    
     .fixedBottom {
         position: fixed;
         right: 0;
